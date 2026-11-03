@@ -1,0 +1,16 @@
+{
+  "type": "grouped_bar",
+  "id": "sms-reminder-rct",
+  "title": "No-Show Rate: With vs. Without SMS Reminders",
+  "subtitle": "Pediatric clinic, randomized controlled trial",
+  "description": "Grouped bar chart from a randomized controlled trial at an urban pediatric clinic. The no-show rate was 38.1% in the control group that received only a standard voice message reminder, versus 23.5% in the group that also received an SMS text reminder, a 14.6 percentage point reduction (p = 0.04). Source: Lin et al., International Journal of Pediatrics, 2016.",
+  "data": [
+    { "label": "Control (voice only)", "values": { "No-show rate %": 38.1 } },
+    { "label": "SMS reminder added", "values": { "No-show rate %": 23.5 } }
+  ],
+  "source": {
+    "title": "International Journal of Pediatrics",
+    "date": "Lin et al., 2016",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5227159/"
+  }
+}

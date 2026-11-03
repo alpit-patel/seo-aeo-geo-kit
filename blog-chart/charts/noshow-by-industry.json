@@ -1,0 +1,18 @@
+{
+  "type": "horizontal_bar",
+  "id": "noshow-by-industry",
+  "title": "Average No-Show Rates by Service Industry",
+  "subtitle": "Share of booked appointments never fulfilled",
+  "description": "Horizontal bar chart of average no-show rates by service industry. The all-service average is 23% (systematic review of 105 studies). Medical practices average 20% (midpoint of an 18-23% range), med spas 18% (16-21% range), and dental clinics 17% (15-20% range). Source: Journal of General Internal Medicine systematic review (Dantas et al., Health Policy 2018); FullSlot 2026 industry benchmarks.",
+  "data": [
+    { "label": "General service", "value": 23 },
+    { "label": "Medical practices", "value": 20 },
+    { "label": "Med spas", "value": 18 },
+    { "label": "Dental clinics", "value": 17 }
+  ],
+  "source": {
+    "title": "Journal of General Internal Medicine; FullSlot",
+    "date": "2018 review; 2026 benchmarks",
+    "url": "https://link.springer.com/journal/11606"
+  }
+}

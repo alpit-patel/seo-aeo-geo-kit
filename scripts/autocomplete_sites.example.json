@@ -1,0 +1,11 @@
+{
+  "mysite": {
+    "globs": ["src/content/**/*.md", "src/data/**/*.ts", "src/pages/**/*.astro"],
+    "relevance": "crm|pricing|automation",
+    "extra_patterns": ["^\\s*(?:secondary|tags|keywords):\\s*\\[(.*?)\\]", "^\\s+-\\s+\"?(.+?)\"?$"]
+  },
+  "myothersite": {
+    "globs": ["content/pages/*.html", "data/*.ts"],
+    "relevance": null
+  }
+}

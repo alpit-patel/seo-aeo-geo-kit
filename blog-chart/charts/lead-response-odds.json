@@ -1,0 +1,18 @@
+{
+  "type": "line",
+  "id": "lead-response-odds",
+  "title": "Lead Response Odds by Speed",
+  "subtitle": "Multiplier vs. baseline, published study values",
+  "description": "Line chart showing how lead response odds fall as response time rises, using the published multipliers from the 2007 MIT/InsideSales.com Lead Response Management Study and the 2011 Harvard Business Review audit of 2,241 US firms. Responding within 5 minutes yields roughly 100x the odds of contacting a lead versus 30 minutes, 21x the odds of qualifying, and responding within 1 hour is about 7x more likely to qualify than responding later. Waiting 24 hours or longer drops odds toward a 1x baseline. Source: MIT & InsideSales.com (2007); HBR (2011).",
+  "data": [
+    { "label": "5 min", "value": 100 },
+    { "label": "30 min", "value": 21 },
+    { "label": "1 hr", "value": 7 },
+    { "label": "24 hrs", "value": 1 }
+  ],
+  "source": {
+    "title": "MIT & InsideSales.com; Harvard Business Review",
+    "date": "2007 and 2011",
+    "url": "https://25649.fs1.hubspotusercontent-na2.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf"
+  }
+}

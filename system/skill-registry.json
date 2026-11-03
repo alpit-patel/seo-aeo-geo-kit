@@ -1,0 +1,772 @@
+[
+  {
+    "id": 1,
+    "skill": "blog",
+    "family": "Blog",
+    "purpose": "Blog lifecycle entry",
+    "stage": "Discovery / routing",
+    "inputs": "content inventory, objective, audience",
+    "output": "blog strategy or audit path",
+    "qa": "intent and scope validated"
+  },
+  {
+    "id": 2,
+    "skill": "blog-analyze",
+    "family": "Blog",
+    "purpose": "Analyze existing content",
+    "stage": "Diagnosis",
+    "inputs": "article/site content",
+    "output": "findings + opportunities",
+    "qa": "claims and observations separated"
+  },
+  {
+    "id": 3,
+    "skill": "blog-audio",
+    "family": "Blog",
+    "purpose": "Adapt blog to audio",
+    "stage": "Repurpose",
+    "inputs": "approved article",
+    "output": "audio-ready script",
+    "qa": "meaning preserved"
+  },
+  {
+    "id": 4,
+    "skill": "blog-audit",
+    "family": "Blog",
+    "purpose": "Editorial/content audit",
+    "stage": "QA",
+    "inputs": "content corpus",
+    "output": "quality audit",
+    "qa": "issues prioritized by impact"
+  },
+  {
+    "id": 5,
+    "skill": "blog-brand",
+    "family": "Blog",
+    "purpose": "Brand alignment",
+    "stage": "Strategy / edit",
+    "inputs": "brand voice, positioning",
+    "output": "brand-aligned content rules",
+    "qa": "no invented brand claims"
+  },
+  {
+    "id": 6,
+    "skill": "blog-brief",
+    "family": "Blog",
+    "purpose": "Create editorial brief",
+    "stage": "Planning",
+    "inputs": "research, intent, audience",
+    "output": "production brief",
+    "qa": "all required fields populated"
+  },
+  {
+    "id": 7,
+    "skill": "blog-calendar",
+    "family": "Blog",
+    "purpose": "Editorial calendar",
+    "stage": "Planning",
+    "inputs": "topics, cadence, priorities",
+    "output": "calendar",
+    "qa": "dependencies and capacity checked"
+  },
+  {
+    "id": 8,
+    "skill": "blog-cannibalization",
+    "family": "Blog",
+    "purpose": "Detect content overlap",
+    "stage": "Diagnosis",
+    "inputs": "content URLs/topics",
+    "output": "overlap map + action",
+    "qa": "distinct intent confirmed"
+  },
+  {
+    "id": 9,
+    "skill": "blog-chart",
+    "family": "Blog",
+    "purpose": "Plan/create content charts",
+    "stage": "Creation",
+    "inputs": "data + narrative need",
+    "output": "chart specification/content",
+    "qa": "numbers traceable to source"
+  },
+  {
+    "id": 10,
+    "skill": "blog-cluster",
+    "family": "Blog",
+    "purpose": "Build blog topic clusters",
+    "stage": "Architecture",
+    "inputs": "topics, entities, intent",
+    "output": "cluster map",
+    "qa": "no duplicate intent"
+  },
+  {
+    "id": 11,
+    "skill": "blog-decay",
+    "family": "Blog",
+    "purpose": "Detect content decay",
+    "stage": "Monitoring",
+    "inputs": "performance history",
+    "output": "refresh candidates",
+    "qa": "decline verified"
+  },
+  {
+    "id": 12,
+    "skill": "blog-discourse",
+    "family": "Blog",
+    "purpose": "Research discourse/community language",
+    "stage": "Research",
+    "inputs": "questions, communities",
+    "output": "audience language + themes",
+    "qa": "anecdotes not treated as universal facts"
+  },
+  {
+    "id": 13,
+    "skill": "blog-factcheck",
+    "family": "Blog",
+    "purpose": "Fact-check content",
+    "stage": "QA",
+    "inputs": "draft + sources",
+    "output": "verified claims/issues",
+    "qa": "sources support exact claims"
+  },
+  {
+    "id": 14,
+    "skill": "blog-flow",
+    "family": "Blog",
+    "purpose": "Improve reader flow",
+    "stage": "Editing",
+    "inputs": "draft",
+    "output": "restructured copy",
+    "qa": "logic and transitions improved"
+  },
+  {
+    "id": 15,
+    "skill": "blog-geo",
+    "family": "Blog",
+    "purpose": "Optimize blog for GEO",
+    "stage": "GEO",
+    "inputs": "approved content + entity model",
+    "output": "GEO recommendations",
+    "qa": "no unsupported citation promises"
+  },
+  {
+    "id": 16,
+    "skill": "blog-google",
+    "family": "Blog",
+    "purpose": "Google-oriented content analysis",
+    "stage": "Research",
+    "inputs": "query/page/context",
+    "output": "Google search observations",
+    "qa": "current claims sourced"
+  },
+  {
+    "id": 17,
+    "skill": "blog-image",
+    "family": "Blog",
+    "purpose": "Blog visual workflow",
+    "stage": "Creation",
+    "inputs": "article + visual brief",
+    "output": "image brief/assets",
+    "qa": "accessibility and relevance checked"
+  },
+  {
+    "id": 18,
+    "skill": "blog-locale-audit",
+    "family": "Blog",
+    "purpose": "Locale QA",
+    "stage": "Localization",
+    "inputs": "localized content",
+    "output": "locale findings",
+    "qa": "local conventions verified"
+  },
+  {
+    "id": 19,
+    "skill": "blog-localize",
+    "family": "Blog",
+    "purpose": "Localize content",
+    "stage": "Localization",
+    "inputs": "source content + market context",
+    "output": "localized copy",
+    "qa": "not literal translation"
+  },
+  {
+    "id": 20,
+    "skill": "blog-multilingual",
+    "family": "Blog",
+    "purpose": "Multilingual operations",
+    "stage": "Localization",
+    "inputs": "content + locales",
+    "output": "language variants",
+    "qa": "SEO architecture preserved"
+  },
+  {
+    "id": 21,
+    "skill": "blog-notebooklm",
+    "family": "Blog",
+    "purpose": "Research support workflow",
+    "stage": "Research",
+    "inputs": "source pack",
+    "output": "research synthesis",
+    "qa": "sources traceable"
+  },
+  {
+    "id": 22,
+    "skill": "blog-outline",
+    "family": "Blog",
+    "purpose": "Build article outline",
+    "stage": "Planning",
+    "inputs": "brief + SERP research",
+    "output": "outline",
+    "qa": "intent coverage and differentiation"
+  },
+  {
+    "id": 23,
+    "skill": "blog-persona",
+    "family": "Blog",
+    "purpose": "Model audience/persona",
+    "stage": "Research",
+    "inputs": "business + audience data",
+    "output": "persona/JTBD notes",
+    "qa": "no invented customer facts"
+  },
+  {
+    "id": 24,
+    "skill": "blog-repurpose",
+    "family": "Blog",
+    "purpose": "Repurpose authoritative content",
+    "stage": "Distribution",
+    "inputs": "approved source asset",
+    "output": "adapted assets",
+    "qa": "claims remain consistent"
+  },
+  {
+    "id": 25,
+    "skill": "blog-rewrite",
+    "family": "Blog",
+    "purpose": "Upgrade existing content",
+    "stage": "Refresh",
+    "inputs": "existing article + evidence",
+    "output": "revised article",
+    "qa": "preserve useful equity, remove stale claims"
+  },
+  {
+    "id": 26,
+    "skill": "blog-schema",
+    "family": "Blog",
+    "purpose": "Article schema",
+    "stage": "Technical",
+    "inputs": "page facts",
+    "output": "JSON-LD specification",
+    "qa": "visible facts only"
+  },
+  {
+    "id": 27,
+    "skill": "blog-seo-check",
+    "family": "Blog",
+    "purpose": "Article SEO QA",
+    "stage": "QA",
+    "inputs": "page/draft",
+    "output": "SEO checklist + fixes",
+    "qa": "no keyword stuffing"
+  },
+  {
+    "id": 28,
+    "skill": "blog-strategy",
+    "family": "Blog",
+    "purpose": "Blog strategy",
+    "stage": "Strategy",
+    "inputs": "business, audience, search landscape",
+    "output": "strategy",
+    "qa": "priorities tied to business"
+  },
+  {
+    "id": 29,
+    "skill": "blog-style",
+    "family": "Blog",
+    "purpose": "Voice/style editing",
+    "stage": "Editing",
+    "inputs": "brand style + draft",
+    "output": "style-compliant copy",
+    "qa": "natural rhythm, no boilerplate"
+  },
+  {
+    "id": 30,
+    "skill": "blog-taxonomy",
+    "family": "Blog",
+    "purpose": "Content taxonomy",
+    "stage": "Architecture",
+    "inputs": "content corpus",
+    "output": "taxonomy model",
+    "qa": "taxonomy reflects real topics"
+  },
+  {
+    "id": 31,
+    "skill": "blog-translate",
+    "family": "Blog",
+    "purpose": "Translate content",
+    "stage": "Localization",
+    "inputs": "source + target locale",
+    "output": "translation",
+    "qa": "meaning and terminology preserved"
+  },
+  {
+    "id": 32,
+    "skill": "blog-write",
+    "family": "Blog",
+    "purpose": "Draft editorial content",
+    "stage": "Creation",
+    "inputs": "brief, evidence, outline",
+    "output": "draft",
+    "qa": "no fabricated experience"
+  },
+  {
+    "id": 33,
+    "skill": "seo",
+    "family": "SEO",
+    "purpose": "Master SEO router",
+    "stage": "Routing",
+    "inputs": "task/context",
+    "output": "selected workflow",
+    "qa": "smallest sufficient skill set"
+  },
+  {
+    "id": 34,
+    "skill": "seo-audit",
+    "family": "SEO",
+    "purpose": "Site/page SEO audit",
+    "stage": "Diagnosis",
+    "inputs": "site + tools/data",
+    "output": "prioritized audit",
+    "qa": "impact/evidence based"
+  },
+  {
+    "id": 35,
+    "skill": "seo-backlinks",
+    "family": "SEO",
+    "purpose": "Backlink analysis",
+    "stage": "Authority",
+    "inputs": "link data, competitors",
+    "output": "link opportunities/risks",
+    "qa": "relevance and legitimacy checked"
+  },
+  {
+    "id": 36,
+    "skill": "seo-cluster",
+    "family": "SEO",
+    "purpose": "SEO topic/entity clusters",
+    "stage": "Architecture",
+    "inputs": "topics, entities, SERPs",
+    "output": "cluster architecture",
+    "qa": "intent separation"
+  },
+  {
+    "id": 37,
+    "skill": "seo-competitor-pages",
+    "family": "SEO",
+    "purpose": "Competitor page analysis",
+    "stage": "Research",
+    "inputs": "competitor URLs/SERPs",
+    "output": "gap map",
+    "qa": "facts verified"
+  },
+  {
+    "id": 38,
+    "skill": "seo-content",
+    "family": "SEO",
+    "purpose": "SEO content workflow",
+    "stage": "Creation",
+    "inputs": "strategy + intent",
+    "output": "content plan/draft",
+    "qa": "use narrower content skill where applicable"
+  },
+  {
+    "id": 39,
+    "skill": "seo-content-brief",
+    "family": "SEO",
+    "purpose": "SEO content brief",
+    "stage": "Planning",
+    "inputs": "SERP, intent, business goal",
+    "output": "SEO brief",
+    "qa": "specific intent and evidence"
+  },
+  {
+    "id": 40,
+    "skill": "seo-dataforseo",
+    "family": "SEO",
+    "purpose": "Search/SERP data",
+    "stage": "Research",
+    "inputs": "market/query scope",
+    "output": "keyword/SERP data",
+    "qa": "date/market recorded"
+  },
+  {
+    "id": 41,
+    "skill": "seo-drift",
+    "family": "SEO",
+    "purpose": "SEO drift detection",
+    "stage": "Monitoring",
+    "inputs": "historical/current data",
+    "output": "drift diagnosis",
+    "qa": "site vs market causes separated"
+  },
+  {
+    "id": 42,
+    "skill": "seo-ecommerce",
+    "family": "SEO",
+    "purpose": "Ecommerce SEO",
+    "stage": "Specialized",
+    "inputs": "catalog, categories, products",
+    "output": "commerce SEO plan",
+    "qa": "product/category intent distinct"
+  },
+  {
+    "id": 43,
+    "skill": "seo-flow",
+    "family": "SEO",
+    "purpose": "SEO workflow orchestration",
+    "stage": "Orchestration",
+    "inputs": "task + selected modules",
+    "output": "execution flow",
+    "qa": "dependencies respected"
+  },
+  {
+    "id": 44,
+    "skill": "seo-geo",
+    "family": "SEO",
+    "purpose": "SEO + GEO integration",
+    "stage": "Optimization",
+    "inputs": "SEO + GEO findings",
+    "output": "integrated recommendations",
+    "qa": "no false GEO guarantees"
+  },
+  {
+    "id": 45,
+    "skill": "seo-google",
+    "family": "SEO",
+    "purpose": "Google search analysis",
+    "stage": "Research",
+    "inputs": "queries/pages",
+    "output": "Google SERP/indexation findings",
+    "qa": "time period documented"
+  },
+  {
+    "id": 46,
+    "skill": "seo-hreflang",
+    "family": "SEO",
+    "purpose": "International SEO/hreflang",
+    "stage": "Technical",
+    "inputs": "locale URL model",
+    "output": "hreflang plan/QA",
+    "qa": "bidirectional mapping checked"
+  },
+  {
+    "id": 47,
+    "skill": "seo-image-gen",
+    "family": "SEO",
+    "purpose": "Generate SEO visual assets",
+    "stage": "Creation",
+    "inputs": "visual brief",
+    "output": "image asset",
+    "qa": "brand/accessibility requirements met"
+  },
+  {
+    "id": 48,
+    "skill": "seo-images",
+    "family": "SEO",
+    "purpose": "Image SEO",
+    "stage": "Optimization",
+    "inputs": "images/page context",
+    "output": "filename/alt/caption/metadata",
+    "qa": "descriptive, not spammy"
+  },
+  {
+    "id": 49,
+    "skill": "seo-local",
+    "family": "SEO",
+    "purpose": "Local SEO",
+    "stage": "Specialized",
+    "inputs": "business/location/services",
+    "output": "local SEO plan",
+    "qa": "location facts verified"
+  },
+  {
+    "id": 50,
+    "skill": "seo-maps",
+    "family": "SEO",
+    "purpose": "Maps/local visibility",
+    "stage": "Local",
+    "inputs": "business listing data",
+    "output": "maps optimization plan",
+    "qa": "no fake locations"
+  },
+  {
+    "id": 51,
+    "skill": "seo-page",
+    "family": "SEO",
+    "purpose": "Individual page optimization",
+    "stage": "Optimization",
+    "inputs": "page + intent",
+    "output": "optimized page spec",
+    "qa": "search intent preserved"
+  },
+  {
+    "id": 52,
+    "skill": "seo-plan",
+    "family": "SEO",
+    "purpose": "SEO roadmap",
+    "stage": "Strategy",
+    "inputs": "audit, goals, resources",
+    "output": "prioritized roadmap",
+    "qa": "impact/effort explicit"
+  },
+  {
+    "id": 53,
+    "skill": "seo-programmatic",
+    "family": "SEO",
+    "purpose": "Programmatic SEO",
+    "stage": "Scale",
+    "inputs": "template, data, intent model",
+    "output": "programmatic system",
+    "qa": "pilot before scale"
+  },
+  {
+    "id": 54,
+    "skill": "seo-schema",
+    "family": "SEO",
+    "purpose": "Schema.org/JSON-LD",
+    "stage": "Technical",
+    "inputs": "page/entity facts",
+    "output": "schema graph/spec",
+    "qa": "accurate visible facts"
+  },
+  {
+    "id": 55,
+    "skill": "seo-sitemap",
+    "family": "SEO",
+    "purpose": "XML sitemap",
+    "stage": "Technical",
+    "inputs": "URL inventory",
+    "output": "sitemap plan/file",
+    "qa": "canonical/indexable URLs only"
+  },
+  {
+    "id": 56,
+    "skill": "seo-sxo",
+    "family": "SEO",
+    "purpose": "Search experience/conversion",
+    "stage": "Optimization",
+    "inputs": "intent + page + conversion",
+    "output": "SXO recommendations",
+    "qa": "UX not sacrificed for SEO"
+  },
+  {
+    "id": 57,
+    "skill": "seo-technical",
+    "family": "SEO",
+    "purpose": "Technical SEO",
+    "stage": "Technical",
+    "inputs": "crawl/render/index data",
+    "output": "technical fixes",
+    "qa": "severity + evidence"
+  },
+  {
+    "id": 58,
+    "skill": "geo",
+    "family": "GEO",
+    "purpose": "Master GEO router",
+    "stage": "Routing",
+    "inputs": "GEO objective/context",
+    "output": "selected GEO workflow",
+    "qa": "measurable objective"
+  },
+  {
+    "id": 59,
+    "skill": "geo-audit",
+    "family": "GEO",
+    "purpose": "GEO visibility audit",
+    "stage": "Diagnosis",
+    "inputs": "brand/entity/content/search data",
+    "output": "GEO audit",
+    "qa": "observations sourced"
+  },
+  {
+    "id": 60,
+    "skill": "geo-brand-mentions",
+    "family": "GEO",
+    "purpose": "Brand mention intelligence",
+    "stage": "Authority",
+    "inputs": "brand/entity landscape",
+    "output": "mention map",
+    "qa": "sources verified"
+  },
+  {
+    "id": 61,
+    "skill": "geo-citability",
+    "family": "GEO",
+    "purpose": "Citation readiness",
+    "stage": "Optimization",
+    "inputs": "content + source profile",
+    "output": "citability improvements",
+    "qa": "no citation guarantee"
+  },
+  {
+    "id": 62,
+    "skill": "geo-compare",
+    "family": "GEO",
+    "purpose": "Competitor GEO comparison",
+    "stage": "Research",
+    "inputs": "competitors/topics",
+    "output": "comparison evidence",
+    "qa": "no unsupported rankings"
+  },
+  {
+    "id": 63,
+    "skill": "geo-content",
+    "family": "GEO",
+    "purpose": "Generative-search content",
+    "stage": "Creation",
+    "inputs": "entity model + intent + evidence",
+    "output": "GEO-ready content",
+    "qa": "useful to humans first"
+  },
+  {
+    "id": 64,
+    "skill": "geo-crawlers",
+    "family": "GEO",
+    "purpose": "AI crawler accessibility",
+    "stage": "Technical",
+    "inputs": "robots/server/access data",
+    "output": "crawler findings",
+    "qa": "platform behavior not assumed"
+  },
+  {
+    "id": 65,
+    "skill": "geo-llmstxt",
+    "family": "GEO",
+    "purpose": "llms.txt workflow",
+    "stage": "Technical",
+    "inputs": "site architecture",
+    "output": "llms.txt assessment/file",
+    "qa": "no ranking guarantee claims"
+  },
+  {
+    "id": 66,
+    "skill": "geo-platform-optimizer",
+    "family": "GEO",
+    "purpose": "Platform-specific optimization",
+    "stage": "Optimization",
+    "inputs": "target AI/search platforms",
+    "output": "platform recommendations",
+    "qa": "current platform behavior verified"
+  },
+  {
+    "id": 67,
+    "skill": "geo-proposal",
+    "family": "GEO",
+    "purpose": "GEO service proposal",
+    "stage": "Commercial",
+    "inputs": "scope, evidence, offer",
+    "output": "proposal",
+    "qa": "no guaranteed outcomes"
+  },
+  {
+    "id": 68,
+    "skill": "geo-prospect",
+    "family": "GEO",
+    "purpose": "GEO prospect research",
+    "stage": "Sales",
+    "inputs": "prospect/site",
+    "output": "prospect brief",
+    "qa": "facts separated from hypotheses"
+  },
+  {
+    "id": 69,
+    "skill": "geo-report",
+    "family": "GEO",
+    "purpose": "GEO reporting",
+    "stage": "Measurement",
+    "inputs": "visibility/mention/citation data",
+    "output": "report",
+    "qa": "time period and methodology stated"
+  },
+  {
+    "id": 70,
+    "skill": "geo-report-pdf",
+    "family": "GEO",
+    "purpose": "GEO PDF report",
+    "stage": "Reporting",
+    "inputs": "approved report content",
+    "output": "PDF-ready report",
+    "qa": "source figures validated"
+  },
+  {
+    "id": 71,
+    "skill": "geo-schema",
+    "family": "GEO",
+    "purpose": "GEO/entity schema",
+    "stage": "Technical",
+    "inputs": "entity/page facts",
+    "output": "schema graph/spec",
+    "qa": "accurate relationships"
+  },
+  {
+    "id": 72,
+    "skill": "geo-technical",
+    "family": "GEO",
+    "purpose": "GEO technical foundation",
+    "stage": "Technical",
+    "inputs": "crawl/index/render architecture",
+    "output": "technical plan",
+    "qa": "accessibility verified"
+  },
+  {
+    "id": 73,
+    "skill": "geo-update",
+    "family": "GEO",
+    "purpose": "GEO monitoring/update",
+    "stage": "Monitoring",
+    "inputs": "previous GEO state + current evidence",
+    "output": "update plan",
+    "qa": "change is evidence-based"
+  },
+  {
+    "id": 74,
+    "skill": "clean-user-facing-text",
+    "family": "Text",
+    "purpose": "Clean final user-facing copy",
+    "stage": "Final QA",
+    "inputs": "approved content",
+    "output": "clean copy",
+    "qa": "no internal/tool/prompt leakage"
+  },
+  {
+    "id": 75,
+    "skill": "humanizer",
+    "family": "Text",
+    "purpose": "Human editorial refinement",
+    "stage": "Editorial",
+    "inputs": "fact-checked draft",
+    "output": "natural copy",
+    "qa": "no fabricated human experience"
+  },
+  {
+    "id": 76,
+    "skill": "remove-ai-marks",
+    "family": "Text",
+    "purpose": "Remove obvious AI artifacts",
+    "stage": "Final QA",
+    "inputs": "draft/final copy",
+    "output": "clean final text",
+    "qa": "do not optimize for detector scores"
+  },
+  {
+    "id": 77,
+    "skill": "seo-voice",
+    "family": "SEO",
+    "purpose": "VEO: voice engine optimization",
+    "stage": "Optimization",
+    "inputs": "pages, local listings, GSC data",
+    "output": "VEO report + fixes",
+    "qa": "no untraceable voice stats; speakable news-only"
+  }
+]

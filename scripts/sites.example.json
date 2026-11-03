@@ -1,0 +1,4 @@
+{
+  "myproject": {"gsc": "https://example.com/", "ga4": "<GA4 property id>"},
+  "myotherproject": {"gsc": "https://example.org/", "ga4": "<GA4 property id>"}
+}

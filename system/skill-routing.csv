@@ -1,0 +1,78 @@
+id,skill,family,purpose,stage,inputs,output,qa
+1,blog,Blog,Blog lifecycle entry,Discovery / routing,"content inventory, objective, audience",blog strategy or audit path,intent and scope validated
+2,blog-analyze,Blog,Analyze existing content,Diagnosis,article/site content,findings + opportunities,claims and observations separated
+3,blog-audio,Blog,Adapt blog to audio,Repurpose,approved article,audio-ready script,meaning preserved
+4,blog-audit,Blog,Editorial/content audit,QA,content corpus,quality audit,issues prioritized by impact
+5,blog-brand,Blog,Brand alignment,Strategy / edit,"brand voice, positioning",brand-aligned content rules,no invented brand claims
+6,blog-brief,Blog,Create editorial brief,Planning,"research, intent, audience",production brief,all required fields populated
+7,blog-calendar,Blog,Editorial calendar,Planning,"topics, cadence, priorities",calendar,dependencies and capacity checked
+8,blog-cannibalization,Blog,Detect content overlap,Diagnosis,content URLs/topics,overlap map + action,distinct intent confirmed
+9,blog-chart,Blog,Plan/create content charts,Creation,data + narrative need,chart specification/content,numbers traceable to source
+10,blog-cluster,Blog,Build blog topic clusters,Architecture,"topics, entities, intent",cluster map,no duplicate intent
+11,blog-decay,Blog,Detect content decay,Monitoring,performance history,refresh candidates,decline verified
+12,blog-discourse,Blog,Research discourse/community language,Research,"questions, communities",audience language + themes,anecdotes not treated as universal facts
+13,blog-factcheck,Blog,Fact-check content,QA,draft + sources,verified claims/issues,sources support exact claims
+14,blog-flow,Blog,Improve reader flow,Editing,draft,restructured copy,logic and transitions improved
+15,blog-geo,Blog,Optimize blog for GEO,GEO,approved content + entity model,GEO recommendations,no unsupported citation promises
+16,blog-google,Blog,Google-oriented content analysis,Research,query/page/context,Google search observations,current claims sourced
+17,blog-image,Blog,Blog visual workflow,Creation,article + visual brief,image brief/assets,accessibility and relevance checked
+18,blog-locale-audit,Blog,Locale QA,Localization,localized content,locale findings,local conventions verified
+19,blog-localize,Blog,Localize content,Localization,source content + market context,localized copy,not literal translation
+20,blog-multilingual,Blog,Multilingual operations,Localization,content + locales,language variants,SEO architecture preserved
+21,blog-notebooklm,Blog,Research support workflow,Research,source pack,research synthesis,sources traceable
+22,blog-outline,Blog,Build article outline,Planning,brief + SERP research,outline,intent coverage and differentiation
+23,blog-persona,Blog,Model audience/persona,Research,business + audience data,persona/JTBD notes,no invented customer facts
+24,blog-repurpose,Blog,Repurpose authoritative content,Distribution,approved source asset,adapted assets,claims remain consistent
+25,blog-rewrite,Blog,Upgrade existing content,Refresh,existing article + evidence,revised article,"preserve useful equity, remove stale claims"
+26,blog-schema,Blog,Article schema,Technical,page facts,JSON-LD specification,visible facts only
+27,blog-seo-check,Blog,Article SEO QA,QA,page/draft,SEO checklist + fixes,no keyword stuffing
+28,blog-strategy,Blog,Blog strategy,Strategy,"business, audience, search landscape",strategy,priorities tied to business
+29,blog-style,Blog,Voice/style editing,Editing,brand style + draft,style-compliant copy,"natural rhythm, no boilerplate"
+30,blog-taxonomy,Blog,Content taxonomy,Architecture,content corpus,taxonomy model,taxonomy reflects real topics
+31,blog-translate,Blog,Translate content,Localization,source + target locale,translation,meaning and terminology preserved
+32,blog-write,Blog,Draft editorial content,Creation,"brief, evidence, outline",draft,no fabricated experience
+33,seo,SEO,Master SEO router,Routing,task/context,selected workflow,smallest sufficient skill set
+34,seo-audit,SEO,Site/page SEO audit,Diagnosis,site + tools/data,prioritized audit,impact/evidence based
+35,seo-backlinks,SEO,Backlink analysis,Authority,"link data, competitors",link opportunities/risks,relevance and legitimacy checked
+36,seo-cluster,SEO,SEO topic/entity clusters,Architecture,"topics, entities, SERPs",cluster architecture,intent separation
+37,seo-competitor-pages,SEO,Competitor page analysis,Research,competitor URLs/SERPs,gap map,facts verified
+38,seo-content,SEO,SEO content workflow,Creation,strategy + intent,content plan/draft,use narrower content skill where applicable
+39,seo-content-brief,SEO,SEO content brief,Planning,"SERP, intent, business goal",SEO brief,specific intent and evidence
+40,seo-dataforseo,SEO,Search/SERP data,Research,market/query scope,keyword/SERP data,date/market recorded
+41,seo-drift,SEO,SEO drift detection,Monitoring,historical/current data,drift diagnosis,site vs market causes separated
+42,seo-ecommerce,SEO,Ecommerce SEO,Specialized,"catalog, categories, products",commerce SEO plan,product/category intent distinct
+43,seo-flow,SEO,SEO workflow orchestration,Orchestration,task + selected modules,execution flow,dependencies respected
+44,seo-geo,SEO,SEO + GEO integration,Optimization,SEO + GEO findings,integrated recommendations,no false GEO guarantees
+45,seo-google,SEO,Google search analysis,Research,queries/pages,Google SERP/indexation findings,time period documented
+46,seo-hreflang,SEO,International SEO/hreflang,Technical,locale URL model,hreflang plan/QA,bidirectional mapping checked
+47,seo-image-gen,SEO,Generate SEO visual assets,Creation,visual brief,image asset,brand/accessibility requirements met
+48,seo-images,SEO,Image SEO,Optimization,images/page context,filename/alt/caption/metadata,"descriptive, not spammy"
+49,seo-local,SEO,Local SEO,Specialized,business/location/services,local SEO plan,location facts verified
+50,seo-maps,SEO,Maps/local visibility,Local,business listing data,maps optimization plan,no fake locations
+51,seo-page,SEO,Individual page optimization,Optimization,page + intent,optimized page spec,search intent preserved
+52,seo-plan,SEO,SEO roadmap,Strategy,"audit, goals, resources",prioritized roadmap,impact/effort explicit
+53,seo-programmatic,SEO,Programmatic SEO,Scale,"template, data, intent model",programmatic system,pilot before scale
+54,seo-schema,SEO,Schema.org/JSON-LD,Technical,page/entity facts,schema graph/spec,accurate visible facts
+55,seo-sitemap,SEO,XML sitemap,Technical,URL inventory,sitemap plan/file,canonical/indexable URLs only
+56,seo-sxo,SEO,Search experience/conversion,Optimization,intent + page + conversion,SXO recommendations,UX not sacrificed for SEO
+57,seo-technical,SEO,Technical SEO,Technical,crawl/render/index data,technical fixes,severity + evidence
+58,geo,GEO,Master GEO router,Routing,GEO objective/context,selected GEO workflow,measurable objective
+59,geo-audit,GEO,GEO visibility audit,Diagnosis,brand/entity/content/search data,GEO audit,observations sourced
+60,geo-brand-mentions,GEO,Brand mention intelligence,Authority,brand/entity landscape,mention map,sources verified
+61,geo-citability,GEO,Citation readiness,Optimization,content + source profile,citability improvements,no citation guarantee
+62,geo-compare,GEO,Competitor GEO comparison,Research,competitors/topics,comparison evidence,no unsupported rankings
+63,geo-content,GEO,Generative-search content,Creation,entity model + intent + evidence,GEO-ready content,useful to humans first
+64,geo-crawlers,GEO,AI crawler accessibility,Technical,robots/server/access data,crawler findings,platform behavior not assumed
+65,geo-llmstxt,GEO,llms.txt workflow,Technical,site architecture,llms.txt assessment/file,no ranking guarantee claims
+66,geo-platform-optimizer,GEO,Platform-specific optimization,Optimization,target AI/search platforms,platform recommendations,current platform behavior verified
+67,geo-proposal,GEO,GEO service proposal,Commercial,"scope, evidence, offer",proposal,no guaranteed outcomes
+68,geo-prospect,GEO,GEO prospect research,Sales,prospect/site,prospect brief,facts separated from hypotheses
+69,geo-report,GEO,GEO reporting,Measurement,visibility/mention/citation data,report,time period and methodology stated
+70,geo-report-pdf,GEO,GEO PDF report,Reporting,approved report content,PDF-ready report,source figures validated
+71,geo-schema,GEO,GEO/entity schema,Technical,entity/page facts,schema graph/spec,accurate relationships
+72,geo-technical,GEO,GEO technical foundation,Technical,crawl/index/render architecture,technical plan,accessibility verified
+73,geo-update,GEO,GEO monitoring/update,Monitoring,previous GEO state + current evidence,update plan,change is evidence-based
+74,clean-user-facing-text,Text,Clean final user-facing copy,Final QA,approved content,clean copy,no internal/tool/prompt leakage
+75,humanizer,Text,Human editorial refinement,Editorial,fact-checked draft,natural copy,no fabricated human experience
+76,remove-ai-marks,Text,Remove obvious AI artifacts,Final QA,draft/final copy,clean final text,do not optimize for detector scores
+77,seo-voice,SEO,VEO: voice engine optimization,Optimization,"pages, local listings, GSC data",VEO report + fixes,no untraceable voice stats; speakable news-only

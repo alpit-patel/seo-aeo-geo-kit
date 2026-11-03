@@ -1,0 +1,18 @@
+{
+  "type": "donut",
+  "id": "hbr-response-distribution",
+  "title": "How US Firms Respond to Inbound Leads",
+  "subtitle": "First-response time, audit of 2,241 firms",
+  "description": "Donut chart showing how 2,241 US firms respond to inbound web leads, based on the 2011 Harvard Business Review audit The Short Life of Online Sales Leads. 37% respond within 1 hour, 16% respond between 1 and 24 hours, 24% take more than 24 hours, and 23% never respond at all. Source: Oldroyd, McElheran & Elkington, Harvard Business Review, 2011.",
+  "data": [
+    { "label": "Within 1 hour", "value": 37 },
+    { "label": "1-24 hours", "value": 16 },
+    { "label": "Over 24 hours", "value": 24 },
+    { "label": "Never respond", "value": 23 }
+  ],
+  "source": {
+    "title": "Harvard Business Review",
+    "date": "Oldroyd et al., 2011",
+    "url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+  }
+}

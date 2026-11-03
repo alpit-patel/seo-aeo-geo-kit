@@ -1,0 +1,17 @@
+{
+  "type": "lollipop",
+  "id": "response-benchmarks",
+  "title": "How Fast Companies Actually Respond",
+  "subtitle": "Share of companies hitting each response benchmark",
+  "description": "Lollipop chart showing how fast companies actually respond to leads. Only 7% of companies respond within 5 minutes, 37% respond within 1 hour, and 55% do not respond within 5 business days. Source: Drift Lead Response Survey (2017) and Harvard Business Review The Short Life of Online Sales Leads, 2011.",
+  "data": [
+    { "label": "Respond in 5 min", "value": 7 },
+    { "label": "Respond in 1 hour", "value": 37 },
+    { "label": "Never respond (5+ days)", "value": 55 }
+  ],
+  "source": {
+    "title": "Drift & Harvard Business Review",
+    "date": "2017 and 2011",
+    "url": "https://www.salesloft.com/resources/blog/lead-response-survey"
+  }
+}
