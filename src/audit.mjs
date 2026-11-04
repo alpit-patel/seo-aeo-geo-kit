@@ -66,6 +66,8 @@ export function parseRobots(txt) {
 }
 
 // Each check: [id, pillar, weight, label, test(p, ctx) -> true|false|null (null = not applicable), fix]
+// A heading is a question when it ends in ?, ignoring trailing emoji or spaces.
+const isQuestion = (x) => /\?[\s\p{Extended_Pictographic}\uFE0F\u200D]*$/u.test(x);
 const CHECKS = [
   ['title', 'SEO', 8, 'Title tag 20-65 characters', (p) => p.title.length >= 20 && p.title.length <= 65, 'Write a unique title of 20-65 characters with the main topic first.'],
   ['desc', 'SEO', 6, 'Meta description 70-165 characters', (p) => !!p.description && p.description.length >= 70 && p.description.length <= 165, 'Add a meta description of 70-165 characters that answers the searcher.'],
@@ -80,10 +82,10 @@ const CHECKS = [
   ['og', 'SEO', 3, 'Open Graph title and image', (p) => p.ogTitle && p.ogImage, 'Add og:title and og:image so shares look right.'],
   ['https', 'SEO', 2, 'Served over HTTPS', (p) => (/^https?:/.test(p.url) ? p.url.startsWith('https:') : null), 'Serve the site over HTTPS.'],
   ['schema', 'AEO', 8, 'Structured data (JSON-LD) present', (p) => p.hasLd, 'Add JSON-LD (Organization, Article or Service) to the page.'],
-  ['faq', 'AEO', 8, 'FAQ markup or question headings', (p) => p.ldTypes.has('FAQPage') || p.ldTypes.has('Question') || [...p.h2, ...p.h3].filter((x) => /\?$/.test(x)).length >= 2, 'Add an FAQ section with real questions and FAQPage schema.'],
+  ['faq', 'AEO', 8, 'FAQ markup or question headings', (p) => p.ldTypes.has('FAQPage') || p.ldTypes.has('Question') || [...p.h2, ...p.h3].filter((x) => isQuestion(x)).length >= 2, 'Add an FAQ section with real questions and FAQPage schema.'],
   ['answer', 'AEO', 7, 'Answer-first opening (under 60 words)', (p) => p.firstParagraphWords > 0 && p.firstParagraphWords <= 60, 'Open with a direct 1-3 sentence answer under 60 words before any background.'],
   ['lists', 'AEO', 4, 'Lists or tables for scannable answers', (p) => p.lists >= 1, 'Add a list or table that answers the main question at a glance.'],
-  ['qheads', 'AEO', 3, 'Question-style headings', (p) => [...p.h2, ...p.h3].some((x) => /\?$/.test(x)), 'Phrase at least one heading as a real question people ask (ending in ?).'],
+  ['qheads', 'AEO', 3, 'Question-style headings', (p) => [...p.h2, ...p.h3].some((x) => isQuestion(x)), 'Phrase at least one heading as a real question people ask (ending in ?).'],
   ['article', 'AEO', 2, 'Page-type schema (Article/Service/Product/etc.)', (p) => ['Article', 'BlogPosting', 'Service', 'Product', 'HowTo', 'WebPage', 'LocalBusiness'].some((t) => p.ldTypes.has(t)), 'Add schema that matches the page type.'],
   ['bots', 'GEO', 8, 'robots.txt allows AI crawlers', (p, c) => (c.robots == null ? null : AI_BOTS.slice(0, 4).every((b) => c.robots(b))), 'Allow GPTBot, ClaudeBot, PerplexityBot and Google-Extended in robots.txt if you want AI citations.'],
   ['llms', 'GEO', 5, 'llms.txt present', (p, c) => (c.llms == null ? null : c.llms), 'Publish /llms.txt describing your site for AI systems.'],

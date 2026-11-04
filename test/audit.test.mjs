@@ -85,6 +85,8 @@ test('"Why choose us" is not a question heading', () => {
   assert.equal(r.results.find((x) => x.id === 'qheads').status, 'fail');
   const q = auditHtml('<html lang="en"><body><h1>A</h1><h2>Why choose us?</h2></body></html>');
   assert.equal(q.results.find((x) => x.id === 'qheads').status, 'pass');
+  const e = auditHtml('<html lang="en"><body><h1>A</h1><h2>What does it show? 🎁</h2></body></html>');
+  assert.equal(e.results.find((x) => x.id === 'qheads').status, 'pass');
 });
 
 test('reads nested JSON-LD (author, sameAs, FAQ inside other nodes)', () => {
