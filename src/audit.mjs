@@ -107,25 +107,35 @@ export function score(p, ctx = {}) {
   return { total: possible ? Math.round((earned / possible) * 100) : 0, pillars: Object.fromEntries(Object.entries(pillars).map(([k, v]) => [k, pct(v)])), results, top: results.filter((r) => r.status === 'fail').sort((a, b) => b.weight - a.weight).slice(0, 5) };
 }
 
-async function get(url, ms = 15000, max = 5e6) {
-  const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), ms);
+function decode(buf, contentType = '') {
+  const head = new TextDecoder('latin1').decode(buf.slice(0, 2048));
+  const label = (contentType.match(/charset\s*=\s*["']?([\w-]+)/i) || head.match(/<meta[^>]+charset\s*=\s*["']?([\w-]+)/i) || [])[1] || 'utf-8';
+  try { return new TextDecoder(label).decode(buf); } catch { return new TextDecoder('utf-8').decode(buf); }
+}
+
+async function get(url, { timeout = 15000, max = 5e6 } = {}) {
+  const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), timeout);
   try {
-    const res = await fetch(url, { signal: ctl.signal, redirect: 'follow', headers: { 'user-agent': 'seo-aeo-geo-kit/audit (+https://github.com/alpit-patel/seo-aeo-geo-kit)', accept: 'text/html,*/*' } });
-    const buf = await res.arrayBuffer();
-    return { ok: res.ok, status: res.status, url: res.url, text: new TextDecoder().decode(buf.byteLength > max ? buf.slice(0, max) : buf) };
+    const res = await fetch(url, { signal: ctl.signal, redirect: 'follow', headers: { 'user-agent': 'seo-aeo-geo-kit/audit (+https://github.com/alpit-patel/seo-aeo-geo-kit)', accept: 'text/html,application/xhtml+xml,*/*;q=0.8' } });
+    const buf = new Uint8Array(await res.arrayBuffer());
+    const type = res.headers.get('content-type') || '';
+    return { ok: res.ok, status: res.status, url: res.url, type, text: decode(buf.byteLength > max ? buf.slice(0, max) : buf, type) };
   } catch (e) {
     const why = e.name === 'AbortError' ? 'timed out' : e.cause?.code || e.cause?.message || e.message;
     throw new Error(`Could not fetch ${url} (${why}). Check the address and your connection.`);
   } finally { clearTimeout(t); }
 }
 
-export async function auditUrl(url) {
+export async function auditUrl(url, opts = {}) {
   const u = new URL(url);
   if (!/^https?:$/.test(u.protocol)) throw new Error('Only http and https URLs are supported');
-  const page = await get(u.href);
+  const page = await get(u.href, opts);
   if (!page.ok) throw new Error(`Fetching ${u.href} returned HTTP ${page.status}`);
+  const looksHtml = /html|xml/i.test(page.type) || (!page.type && /^\s*</.test(page.text));
+  if (!looksHtml) throw new Error(`${u.href} returned ${page.type || 'unknown content'}, not a web page. The auditor only scores HTML pages.`);
+  if (!page.text.trim()) throw new Error(`${u.href} returned an empty page.`);
   const origin = new URL(page.url).origin;
-  const [rb, ll] = await Promise.allSettled([get(origin + '/robots.txt'), get(origin + '/llms.txt')]);
+  const [rb, ll] = await Promise.allSettled([get(origin + '/robots.txt', opts), get(origin + '/llms.txt', opts)]);
   const ctx = {
     robots: rb.status === 'fulfilled' && rb.value.ok && !/<html/i.test(rb.value.text) ? parseRobots(rb.value.text) : rb.status === 'fulfilled' && rb.value.status === 404 ? () => true : null,
     llms: ll.status === 'fulfilled' ? ll.value.ok && !/<html/i.test(ll.value.text.slice(0, 300)) : null,

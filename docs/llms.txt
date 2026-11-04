@@ -1,11 +1,12 @@
 # Claude SEO + AEO + GEO Kit
 
-> Free, open-source kit for Claude Code: 83 skills for SEO, AEO (answer engines), GEO (AI search) and VEO (voice), plus a command-line auditor that scores any page 0-100 across SEO, AEO and GEO. MIT licensed. Runs locally.
+> Free, open-source kit for Claude Code, OpenAI Codex, OpenCode and Google Antigravity: 83 skills for SEO, AEO (answer engines), GEO (AI search) and VEO (voice), plus a command-line auditor that scores any page 0-100 across SEO, AEO and GEO. MIT licensed. Runs locally.
 
 ## Use it
 - Audit a page: `npx seo-aeo-geo-kit audit <url>` (add `--summary` for score and top fixes, `--json` for machine output)
 - Install in Claude Code: `/plugin marketplace add alpit-patel/seo-aeo-geo-kit` then `/plugin install seo-aeo-geo-kit@seo-aeo-geo-kit`
-- Copy skills only: `npx seo-aeo-geo-kit install --only geo`
+- Other agents: `npx seo-aeo-geo-kit install --target codex|opencode|antigravity|agents --global` (Agent Skills format; works in OpenAI Codex, OpenCode, Google Antigravity and similar tools)
+- Check what is installed: `npx seo-aeo-geo-kit doctor`
 
 ## Docs
 - [Home page and FAQ](https://alpit-patel.github.io/seo-aeo-geo-kit/)

@@ -1,7 +1,7 @@
 {
   "name": "seo-aeo-geo-kit",
-  "version": "0.2.2",
-  "description": "SEO + AEO + GEO skills for Claude Code (83 skills) plus a free page auditor that scores any page 0-100.",
+  "version": "0.3.0",
+  "description": "83 SEO, AEO and GEO skills for Claude Code, Codex, OpenCode and Antigravity (Agent Skills format) plus a free page auditor that scores any page 0-100.",
   "type": "module",
   "bin": {
     "seo-aeo-geo-kit": "bin/cli.mjs"
@@ -22,7 +22,8 @@
     "LICENSES",
     "README.md",
     "LICENSE",
-    "THIRD_PARTY_NOTICES.md"
+    "THIRD_PARTY_NOTICES.md",
+    "AGENTS.md"
   ],
   "scripts": {
     "test": "node --test",
@@ -41,7 +42,12 @@
     "skills",
     "llms-txt",
     "schema",
-    "audit"
+    "audit",
+    "codex",
+    "opencode",
+    "antigravity",
+    "agent-skills",
+    "openai-codex"
   ],
   "license": "MIT",
   "author": "Alpit Patel",

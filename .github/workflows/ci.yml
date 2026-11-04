@@ -24,6 +24,10 @@ jobs:
           node bin/cli.mjs --version
           node bin/cli.mjs list | tail -1
           node bin/cli.mjs audit test/fixtures/good.html | grep -q "Score:"
+          node bin/cli.mjs install --target codex --dest ./ci-install --only seo-audit
+          test -f ./ci-install/seo-audit/SKILL.md
+          test -f ./ci-install/_seo-aeo-geo-kit/scripts/runtime.py
+          node bin/cli.mjs doctor | grep -q "Claude Code"
   python:
     runs-on: ubuntu-latest
     steps:

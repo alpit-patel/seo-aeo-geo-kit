@@ -13,7 +13,7 @@
 
 <p align="center"><img src="docs/demo.gif" alt="Terminal demo: running the auditor on a sample page, showing a 55 out of 100 score and the top fixes" width="80%"></p>
 
-**Jump to:** [Quick start](#quick-start) · [What the auditor checks](#what-the-auditor-checks) · [How it fits together](#how-it-fits-together) · [FAQ](#faq) · [Credits](#credits)
+**Jump to:** [Quick start](#quick-start) · [Other AI tools](#works-with-claude-code-codex-opencode-antigravity-and-more) · [What the auditor checks](#what-the-auditor-checks) · [How it fits together](#how-it-fits-together) · [FAQ](#faq) · [Credits](#credits)
 
 | Pillar | What it covers |
 | --- | --- |
@@ -44,7 +44,7 @@ You get a score out of 100 for SEO, AEO and GEO, a pass/fail list, and the top f
 /plugin install seo-aeo-geo-kit@seo-aeo-geo-kit
 ```
 
-Then ask in plain language: "audit this page for SEO, AEO and GEO", "write a blog post on X and fact-check it", or "check whether AI crawlers can read my site".
+Using Codex, OpenCode or Antigravity instead? See [Works with Claude Code, Codex, OpenCode, Antigravity and more](#works-with-claude-code-codex-opencode-antigravity-and-more). Then ask in plain language: "audit this page for SEO, AEO and GEO", "write a blog post on X and fact-check it", or "check whether AI crawlers can read my site".
 
 ### 3. Or copy just the skills you want
 
@@ -55,6 +55,26 @@ npx seo-aeo-geo-kit list --family GEO
 ```
 
 `install` copies skill folders only. The plugin also includes the helper scripts.
+
+## Works with Claude Code, Codex, OpenCode, Antigravity and more
+
+All skills use the open **Agent Skills** format (`SKILL.md` folders), so they are not tied to one tool. One command installs them for your tool:
+
+| Tool | Install | Where it goes |
+| --- | --- | --- |
+| **Claude Code** (full kit) | `/plugin marketplace add alpit-patel/seo-aeo-geo-kit` then `/plugin install seo-aeo-geo-kit@seo-aeo-geo-kit` | managed by the plugin system |
+| **OpenAI Codex** | `npx seo-aeo-geo-kit install --target codex --global` | `~/.codex/skills` (project: `.agents/skills`) |
+| **OpenCode** | `npx seo-aeo-geo-kit install --target opencode --global` | `~/.config/opencode/skills` (project: `.opencode/skills`) |
+| **Google Antigravity** | `npx seo-aeo-geo-kit install --target antigravity --global` | `~/.gemini/antigravity/skills` (project: `.agent/skills`) |
+| **Any other Agent Skills tool** | `npx seo-aeo-geo-kit install --target agents --global` | `~/.agents/skills` (or use `--dest <folder>`) |
+
+Drop `--global` to install into the current project instead. Run `npx seo-aeo-geo-kit doctor` to see which tools are on your machine. Restart your agent afterwards, then ask in plain language: "audit this page for SEO, AEO and GEO".
+
+For tools other than Claude Code the installer makes each skill portable: it keeps only the standard frontmatter fields (author credits move into `metadata`, never dropped), installs the helper files next to the skills in a `_seo-aeo-geo-kit` folder, and points every helper-script path at it. Optional one-time setup for the Python helpers: `python <skills-folder>/_seo-aeo-geo-kit/scripts/runtime.py setup`.
+
+**Good to know**
+- The full plugin experience (sub-agents and slash commands such as `/seo audit`) is Claude Code only. In other tools the same skills work when you ask in plain language, and the agent follows the steps itself.
+- Tested for real: the Claude Code plugin install, and the portable output of every other target (valid format, no Claude-only variables, credits kept, helper runtime compiles and runs). I have not run these skills inside the Codex, OpenCode or Antigravity apps themselves. Install paths follow each tool's published conventions, so if one differs on your version, use `--dest <folder>`.
 
 ## How it fits together
 

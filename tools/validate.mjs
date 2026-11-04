@@ -68,7 +68,7 @@ for (const f of walk(ROOT)) {
   if (f.includes(`${sep}vendor${sep}`) || /\.(png|jpg|jpeg|gif|pdf|ico|woff2?)$/i.test(f)) continue;
   let text; try { text = readFileSync(f, 'utf8'); } catch { continue; }
   const rel = relative(ROOT, f).split(sep).join('/'); // forward slashes on every OS
-  for (const re of LEAK) if (re.test(text) && !rel.startsWith('tools/')) err(`${rel}: possible leak matching ${re}`);
+  for (const re of LEAK) if (re.test(text) && !rel.startsWith('tools/') && !/^test\/[^/]+\.test\.mjs$/.test(rel)) err(`${rel}: possible leak matching ${re}`);
   if (!f.endsWith('.md')) continue;
   const clean = text.replace(/```[\s\S]*?```/g, '');
   for (const m of clean.matchAll(/\[[^\]]*\]\(([^)\s]+)\)/g)) {

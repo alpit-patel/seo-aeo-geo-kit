@@ -93,3 +93,25 @@ test('reads nested JSON-LD (author, sameAs, FAQ inside other nodes)', () => {
   assert.ok(p.ldTypes.has('Person') && p.ldTypes.has('FAQPage'));
   assert.ok(p.sameAs && p.author && p.date);
 });
+
+test('rejects non-HTML and empty responses instead of scoring them', async () => {
+  const srv = createServer((req, res) => {
+    if (req.url === '/json') { res.writeHead(200, { 'content-type': 'application/json' }); res.end('{"a":1}'); }
+    else if (req.url === '/empty') { res.writeHead(200, { 'content-type': 'text/html' }); res.end(''); }
+    else if (req.url === '/latin1') { res.writeHead(200, { 'content-type': 'text/html; charset=iso-8859-1' }); res.end(Buffer.from('<html lang="fr"><head><title>Caf\xe9 Gu\xe9rin tr\xe8s bon restaurant</title></head><body><h1>x</h1></body></html>', 'latin1')); }
+    else if (req.url === '/meta') { res.writeHead(200, { 'content-type': 'text/html' }); res.end(Buffer.from('<html><head><meta charset="windows-1252"><title>Caf\xe9 Gu\xe9rin tr\xe8s bon restaurant</title></head><body><h1>x</h1></body></html>', 'latin1')); }
+    else if (req.url === '/slow') { setTimeout(() => { res.writeHead(200); res.end('x'); }, 3000); }
+    else { res.writeHead(404); res.end(); }
+  });
+  await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const base = `http://127.0.0.1:${srv.address().port}`;
+  try {
+    await assert.rejects(() => auditUrl(base + '/json'), /not a web page/);
+    await assert.rejects(() => auditUrl(base + '/empty'), /empty page/);
+    await assert.rejects(() => auditUrl(base + '/slow', { timeout: 300 }), /timed out/);
+    for (const p of ['/latin1', '/meta']) {
+      const r = await auditUrl(base + p);
+      assert.equal(r.results.find((x) => x.id === 'title').status, 'pass', `${p} title decoded correctly`);
+    }
+  } finally { srv.close(); }
+});

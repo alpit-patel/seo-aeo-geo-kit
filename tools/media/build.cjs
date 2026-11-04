@@ -40,7 +40,7 @@ async function shot(browser, name, w, h, html) {
   const browser = await chromium.launch();
 
   await shot(browser, 'social', 1280, 640, page(`<div class="w" style="display:flex;height:640px;align-items:center;padding:0 80px;justify-content:space-between">
-    <div><div class="mute" style="font-size:26px;font-weight:600;letter-spacing:.14em">FOR CLAUDE CODE</div>
+    <div><div class="mute" style="font-size:22px;font-weight:600;letter-spacing:.1em">FOR CLAUDE CODE · CODEX · OPENCODE · ANTIGRAVITY</div>
     <div style="font-size:96px;font-weight:800;line-height:1;letter-spacing:-4px;margin-top:18px">SEO + AEO<br><span class="g">+ GEO Kit</span></div>
     <div class="mute" style="font-size:30px;margin-top:22px;max-width:640px;line-height:1.35">${n} skills + a free page auditor. Rank in Google, win answers, get cited by AI.</div>
     <div style="margin-top:30px"><span class="chip">SEO</span><span class="chip">AEO</span><span class="chip">GEO</span><span class="chip">VEO</span></div></div>
