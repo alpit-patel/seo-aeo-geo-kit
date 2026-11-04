@@ -1,0 +1,19 @@
+{
+  "name": "seo-aeo-geo-kit",
+  "version": "0.1.0",
+  "description": "SEO + AEO + GEO skills for Claude Code (82 skills) plus a free page auditor that scores any page 0-100.",
+  "type": "module",
+  "bin": { "seo-aeo-geo-kit": "bin/cli.mjs" },
+  "files": ["bin", "src", "skills", "system", "templates", "scripts", "vendor", ".claude-plugin", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md"],
+  "scripts": {
+    "test": "node --test",
+    "validate": "node tools/validate.mjs"
+  },
+  "engines": { "node": ">=18" },
+  "keywords": ["seo", "aeo", "geo", "claude-code", "claude", "ai-search", "skills", "llms-txt", "schema", "audit"],
+  "license": "MIT",
+  "author": "Alpit Patel",
+  "homepage": "https://github.com/alpit-patel/seo-aeo-geo-kit",
+  "repository": { "type": "git", "url": "git+https://github.com/alpit-patel/seo-aeo-geo-kit.git" },
+  "bugs": { "url": "https://github.com/alpit-patel/seo-aeo-geo-kit/issues" }
+}

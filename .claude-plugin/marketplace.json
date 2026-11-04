@@ -1,0 +1,16 @@
+{
+  "name": "seo-aeo-geo-kit",
+  "description": "SEO, AEO, GEO and VEO skills for Claude Code.",
+  "owner": {
+    "name": "Alpit Patel"
+  },
+  "plugins": [
+    {
+      "name": "seo-aeo-geo-kit",
+      "source": "./",
+      "description": "82 skills for SEO, AEO, GEO and VEO: research, write, fact-check and audit pages that rank in Google and get cited by AI search.",
+      "version": "0.1.0",
+      "category": "marketing"
+    }
+  ]
+}

@@ -1,18 +1,18 @@
 # SKILL ROUTING POLICY
 
-Use `MASTER_SEO_SOP.md` section 38 as the canonical 77-skill routing matrix, and the auto-routing
-table in `<your-run-command>.md` (section 3) to pick pipelines from the request.
+Use this file as the routing matrix and `skill-registry.json` / `skill-routing.csv` for per-skill detail.
+Pick the pipeline from the request, then run the minimum set of skills it needs.
 
 ## Pipelines
 
-| Pipeline | Entry | Core skills / scripts | SOP |
-| --- | --- | --- | --- |
-| Google data | every audit, refresh, plan and report | `scripts/google_data.py`, `seo-google` | 42, 29 |
-| SEO | any page, site or technical task | `seo` router, `seo-audit`, `seo-technical`, `seo-page`, `seo-schema`, `seo-content` | 20, 40 |
-| AEO | questions, FAQs, answer-first rewrites | plan-sheet gap audit, `blog-outline`, `seo-content`, `blog-factcheck` | 13 |
-| GEO | AI visibility, citations, crawlers | `geo` router, `geo-audit`, `geo-crawlers`, `geo-citability`, `geo-brand-mentions`, `geo-schema` | 14-16, 43 |
-| VEO | voice search, spoken answers, local | `seo-voice`, `seo-local`, `seo-maps`, `scripts/voice_audit.py` | 41, 23 |
-| Editorial | every reader-facing output | `blog-factcheck` -> `humanizer` -> `remove-ai-marks` (service) -> `clean-user-facing-text` | 10-12, 39.5 |
+| Pipeline | Entry | Core skills / scripts |
+| --- | --- | --- |
+| Google data | every audit, refresh, plan and report | `scripts/google_data.py`, `seo-google` |
+| SEO | any page, site or technical task | `seo` router, `seo-audit`, `seo-technical`, `seo-page`, `seo-schema`, `seo-content` |
+| AEO (answer engines) | questions, FAQs, answer-first rewrites | `blog-outline`, `seo-content`, `seo-schema`, `blog-factcheck` |
+| GEO (AI search) | AI visibility, citations, crawlers | `geo` router, `geo-audit`, `geo-crawlers`, `geo-citability`, `geo-brand-mentions`, `geo-schema` |
+| VEO (voice and local) | voice search, spoken answers, local | `seo-voice`, `seo-local`, `seo-maps`, `scripts/voice_audit.py` |
+| Editorial | every reader-facing output | `blog-factcheck` -> `humanizer` -> `remove-ai-marks` -> `clean-user-facing-text` |
 
 ## Default routing
 

@@ -1,0 +1,38 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [18, 20, 22]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - run: npm run validate
+      - name: CLI smoke test
+        shell: bash
+        run: |
+          node bin/cli.mjs --version
+          node bin/cli.mjs list | tail -1
+          node bin/cli.mjs audit test/fixtures/good.html | grep -q "Score:"
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile all Python helpers
+        run: python -m compileall -q scripts skills
+      - name: Launcher reports missing helpers clearly
+        run: |
+          python scripts/claude-seo run definitely_missing.py; test $? -eq 3

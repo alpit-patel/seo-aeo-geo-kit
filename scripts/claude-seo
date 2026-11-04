@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+"""Launcher used by skills: `claude-seo run <script>.py [args...]`.
+
+Finds the helper script anywhere in this kit (skills/*/scripts, scripts, vendor/*/scripts) and runs it
+with the current Python. If the script is not bundled, it exits with code 3 and a clear message so the
+caller can fall back to a manual check (WebFetch, browser, or reasoning) instead of failing mysteriously.
+"""
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+
+def find(name):
+    for base in (ROOT / "scripts", *sorted((ROOT / "skills").glob("*/scripts")), *sorted((ROOT / "vendor").glob("*/scripts"))):
+        p = base / name
+        if p.is_file():
+            return p
+    return None
+
+
+def main(argv):
+    if len(argv) < 3 or argv[1] != "run":
+        print("usage: claude-seo run <script>.py [args...]", file=sys.stderr)
+        return 2
+    name = os.path.basename(argv[2])
+    path = find(name)
+    if path is None:
+        print(f"[claude-seo] helper script '{name}' is not bundled in this kit. "
+              "Continue without it: perform the check manually (fetch the page, read the HTML, or reason from the evidence) "
+              "and say in your report that the automated check was skipped.", file=sys.stderr)
+        return 3
+    return subprocess.call([sys.executable, str(path), *argv[3:]])
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))
