@@ -11,6 +11,9 @@ description: >
 user-invokable: true
 argument-hint: "[<niche>]"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Calendar: Editorial Planning
@@ -304,3 +307,5 @@ Suggested workflow:
 6. Re-run `/blog calendar` next month/quarter for the next plan
 7. Review the Content Decay Report weekly and address Critical items first
 8. Track Topic Cluster Progress monthly to ensure clusters reach completion
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

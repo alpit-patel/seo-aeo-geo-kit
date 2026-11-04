@@ -14,6 +14,9 @@ description: >
 user-invokable: true
 argument-hint: "<topic>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Outline Generator: SERP-Informed Structure Planning
@@ -146,3 +149,5 @@ Save the outline to `outlines/[slug]-outline.md` or to a user-specified path.
 Confirm the outline is ready for `/blog write` to consume.
 
 If the `outlines/` directory does not exist, create it.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

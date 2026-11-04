@@ -15,6 +15,8 @@ metadata:
   author: AgriciDaniel
   version: "2.5.0"
   category: seo
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Agentic Browsing Readiness
@@ -190,3 +192,5 @@ version changes, and the `CHECKED_ON` constant in `agentic_check.py` together.
 | WebMCP audits N/A | The testing browser lacked WebMCP support, or the page registers nothing. Not a defect. |
 | Site blocks the audit fetcher | Report the status and headers; do not retry with spoofed agent user agents unless step 4's authorization applies. |
 | URL blocked by url_safety | Explain the SSRF guard; for a host the user controls, see `CLAUDE_SEO_LOCAL_TARGETS`. |
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

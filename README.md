@@ -2,6 +2,8 @@
 
 <h1 align="center">Claude SEO + AEO + GEO Kit</h1>
 
+<p align="center">Created and maintained by <a href="https://github.com/alpit-patel"><b>Alpit Patel</b></a></p>
+
 <p align="center"><b>83 skills that research, write, fact-check and audit pages for Google, answer engines and AI search.</b><br>Plus a free command that scores any page 0-100.</p>
 
 <p align="center">
@@ -116,7 +118,7 @@ The auditor only fetches the URL you give it, plus that site's `robots.txt` and 
 
 ## Credits
 
-This kit curates and connects work from several open-source authors, all under the MIT License, including AgriciDaniel, Zubair Trabzada, Corey Haines, Siqi Chen, Guillaume Meyer and puneetindersingh. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for the full list. Each skill keeps its original license file.
+Curated and maintained by **Alpit Patel**, who wrote the auditor, installer, validator and the routing and quality system. The kit also builds on MIT-licensed work by AgriciDaniel, Zubair Trabzada, Corey Haines, Siqi Chen, Guillaume Meyer, puneetindersingh and others. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for the full list. Each skill keeps its original license file.
 
 ## Contributing
 

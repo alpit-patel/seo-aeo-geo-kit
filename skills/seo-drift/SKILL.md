@@ -14,6 +14,8 @@ metadata:
   original_author: "Dan Colta (Pro Hub Challenge)"
   version: "2.5.0"
   category: seo
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # SEO Drift Monitor (April 2026)
@@ -222,3 +224,5 @@ When drift is detected, recommend the appropriate specialized skill:
 /seo drift compare https://example.com      # What changed?
 /seo drift history https://example.com      # When did it change?
 ```
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

@@ -15,6 +15,8 @@ license: MIT
 metadata:
   author: AgriciDaniel
   version: "2.1.1"
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Audio: Gemini TTS Narration for Blog Posts
@@ -249,3 +251,5 @@ blog-write because audio generation is unavailable.
 
 Load on-demand: do NOT load all at startup:
 - `references/voices.md`: Full 30-voice catalog, recommendations by content type, dialogue pairings
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

@@ -13,6 +13,8 @@ metadata:
   original_author: "Lutfiya Miller (Pro Hub Challenge Winner)"
   version: "2.5.0"
   category: seo
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Semantic Topic Clustering
@@ -329,3 +331,5 @@ After cluster planning or execution completes, offer:
 ## FLOW Framework Integration
 
 For prompt-guided keyword research and gap analysis, use `/seo flow find [url|topic]`: FLOW's 5 find-stage prompts complement the SERP-overlap clustering methodology with structured discovery prompts.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

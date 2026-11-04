@@ -9,6 +9,9 @@ description: >
 version: 1.0.0
 tags: [geo, business, proposal, sales, pricing, client]
 allowed-tools: Read, Write, Bash, Glob, WebFetch
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO Proposal Generator
@@ -343,3 +346,5 @@ Base recommendation on GEO score:
 - Score 41-60 → Recommend **Standard** (structured monthly optimization)
 - Score 61-75 → Recommend **Basic** (maintenance + targeted improvements)
 - Score 76+ → Offer **Basic** or quarterly retainer check-in
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

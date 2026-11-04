@@ -11,6 +11,9 @@ description: >
 user-invokable: true
 argument-hint: "<file-path>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Rewriter: Optimize Existing Posts
@@ -370,3 +373,5 @@ When invoked as `/blog update <file>`, focus on freshness:
 4. Update `lastUpdated` in frontmatter
 5. Preserve the existing structure - minimize rewrites
 6. Target: genuine freshness only. Replace stale statistics, add real new developments, and update `lastUpdated`/`dateModified`; do not rewrite to hit a percentage-change threshold.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

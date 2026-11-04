@@ -8,6 +8,9 @@ allowed-tools:
   - Bash
   - WebFetch
   - Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # AI Citability Scoring Skill
@@ -317,3 +320,5 @@ Generate a file called `GEO-CITABILITY-SCORE.md`:
 | **Claude** | Prefers well-structured, comprehensive passages. Values nuance and accuracy over brevity. |
 | **Gemini (AI Overviews)** | Prefers concise answer blocks (40-60 words). Values content already ranking in top 10 organic results. |
 | **Copilot (Bing)** | Similar to Gemini. Prefers passages from high-authority domains with clear factual claims. |
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

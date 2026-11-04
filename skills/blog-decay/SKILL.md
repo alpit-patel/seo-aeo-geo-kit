@@ -4,6 +4,9 @@ description: Detect content decay from Google Search Console exports by comparin
 argument-hint: "<current-gsc.json> <previous-gsc.json> [threshold] [metric]"
 user-invokable: true
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Decay
@@ -86,3 +89,5 @@ business value:
 Use `blog-google` to collect Search Console exports when live credentials are
 available. Use `blog-rewrite` after decay detection when the recommended action
 is refresh/update content and the page is worth improving.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

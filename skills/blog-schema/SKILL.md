@@ -9,6 +9,9 @@ description: >
 user-invokable: true
 argument-hint: "<file-path>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Schema: JSON-LD Structured Data Generation
@@ -305,3 +308,5 @@ rendered DOM. Server-rendered markup is still more portable for non-Google
 crawlers, but source-only JSON-LD is not a Google requirement. For dynamic
 markup, validate the rendered URL, confirm the values match visible content,
 and avoid delayed or failed client requests that leave the rendered DOM empty.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

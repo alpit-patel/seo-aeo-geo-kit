@@ -4,6 +4,9 @@ description: Learn author writing style from 5 to 10 existing blog posts and gen
 argument-hint: "learn <paths>"
 user-invokable: true
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Style - Writing Style Learning
@@ -86,3 +89,5 @@ voice, readability, vocabulary, and tone settings.
 - **Missing paths**: Skip missing paths and include a warning in the profile.
 - **Unsupported files**: Skip unsupported file types and include a warning.
 - **Empty samples**: Return zeroed metrics rather than crashing.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

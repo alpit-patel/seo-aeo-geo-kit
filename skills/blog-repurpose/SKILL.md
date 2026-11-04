@@ -11,6 +11,9 @@ description: >
 user-invokable: true
 argument-hint: "<file-path>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Repurpose: Cross-Platform Content Adaptation
@@ -293,3 +296,5 @@ Present a summary after saving:
 - Use platform analytics and audience timezone data for posting times. If no
   analytics exist, label timing advice as a hypothesis to test.
 ```
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

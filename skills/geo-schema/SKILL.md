@@ -5,6 +5,9 @@ version: 1.0.0
 author: geo-seo-claude
 tags: [geo, schema, structured-data, json-ld, entity-recognition, ai-discoverability]
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO Schema & Structured Data
@@ -368,3 +371,5 @@ Date: [Date]
 - Server-rendering requirements
 - Testing with Google Rich Results Test and Schema.org Validator
 ```
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

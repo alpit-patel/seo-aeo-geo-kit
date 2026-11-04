@@ -17,6 +17,8 @@ metadata:
   author: AgriciDaniel
   version: "2.1.1"
   category: blog
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Google: Google API Data for Blog Performance
@@ -305,3 +307,5 @@ Falls back gracefully when credentials are not configured.
 | GA4 property not found | Find property ID in GA4 Admin > Property Details. |
 | Indexing API quota exceeded | 200/day limit. Prioritize most important URLs. |
 | Rate limit (429) | Wait and retry with exponential backoff. |
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

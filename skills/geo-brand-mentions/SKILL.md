@@ -8,6 +8,9 @@ allowed-tools:
   - Bash
   - WebFetch
   - Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Brand Mention Scanner Skill
@@ -478,3 +481,5 @@ Generate a file called `GEO-BRAND-MENTIONS.md`:
 - Encourage leadership to post thought leadership content weekly.
 - Publish LinkedIn articles on topics where your brand has unique expertise.
 - Engage with industry discussions to increase brand visibility in professional contexts.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

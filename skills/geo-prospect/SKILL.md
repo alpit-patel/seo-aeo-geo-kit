@@ -9,6 +9,9 @@ description: >
 version: 1.0.0
 tags: [geo, business, crm, prospect, pipeline, sales]
 allowed-tools: Read, Write, Bash, Glob
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO Prospect Manager
@@ -191,3 +194,5 @@ Create directory if it does not exist: `mkdir -p ~/.geo-prospects/audits ~/.geo-
 - All commands print confirmation + current prospect status to terminal
 - No external files unless explicitly saving audits/proposals
 - JSON database is the single source of truth
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

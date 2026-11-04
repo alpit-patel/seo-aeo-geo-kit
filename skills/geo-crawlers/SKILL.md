@@ -8,6 +8,9 @@ allowed-tools:
   - Bash
   - WebFetch
   - Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # AI Crawler Access Analysis Skill
@@ -375,3 +378,5 @@ The AI Crawler Access Score is calculated as:
 | AI-Specific Files Present | 10% | 5 points for llms.txt, 5 points for sitemap accessible to AI crawlers |
 
 Final score = sum of all weighted components, capped at 100.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

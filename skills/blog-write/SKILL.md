@@ -12,6 +12,9 @@ description: >
 user-invokable: true
 argument-hint: "<topic>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Writer: New Article Generation
@@ -517,3 +520,5 @@ On any block, capture `<folder>/preflight-report.json`, re-dispatch the blog-wri
 
 ### Phase 7: Delivery
 Present the completed article only after Phase 6.5 returns all gates passing. Include `<folder>/preview/*.png` screenshots and the compact completion summary described in `skills/blog-write/references/delivery.md`.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

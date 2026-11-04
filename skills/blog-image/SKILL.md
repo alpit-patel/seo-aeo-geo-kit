@@ -15,6 +15,8 @@ metadata:
   author: AgriciDaniel
   version: "2.1.1"
   mcp-package: "@ycse/nanobanana-mcp"
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Image - AI Image Generation for Blog Content
@@ -330,3 +332,5 @@ Load on-demand - do NOT load all at startup:
 - `references/prompt-engineering-blog.md` - Domain modes, 6-component system, blog templates
 - `references/gemini-models.md` - Model specs, rate limits, aspect ratios, pricing
 - `references/mcp-tools.md` - MCP tool parameters and response formats
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

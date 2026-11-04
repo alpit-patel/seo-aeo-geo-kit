@@ -10,6 +10,9 @@ description: >
   or "visualize data".
 user-invokable: false
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Chart: Built-In SVG Data Visualization
@@ -272,3 +275,5 @@ Wrap every chart in a `<figure>` element:
 - [ ] Color palette uses only approved colors
 - [ ] ViewBox is `0 0 560 380` (standard) or justified alternative
 - [ ] Labels, shapes, patterns, or line styles provide redundancy beyond color
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

@@ -8,6 +8,9 @@ allowed-tools:
   - Bash
   - WebFetch
   - Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # llms.txt Standard Analysis and Generation Skill
@@ -430,3 +433,5 @@ Output the complete `llms.txt` file content, ready to be saved to the site's roo
 8. **Coordinate with robots.txt.** Ensure pages listed in llms.txt are not blocked in robots.txt for AI crawlers.
 9. **Mirror your site structure.** Section names in llms.txt should roughly correspond to your main navigation categories.
 10. **Avoid sensitive pages.** Do not include internal tools, admin panels, or pages with sensitive information.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

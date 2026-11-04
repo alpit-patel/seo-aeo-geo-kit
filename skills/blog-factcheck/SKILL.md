@@ -12,6 +12,9 @@ description: >
 user-invokable: true
 argument-hint: "[file]"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Fact-Check
@@ -189,3 +192,5 @@ framework.
 - **Rate limits**: Slow down, batch, and resume rather than silently skipping
   sources. If the user provides an explicit cutoff, mark the rest as
   `SKIPPED: user cutoff`.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

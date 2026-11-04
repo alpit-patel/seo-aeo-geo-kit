@@ -14,6 +14,9 @@ description: >
 user-invokable: true
 argument-hint: "<file-path>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Analyzer: Quality Audit & Scoring
@@ -388,3 +391,5 @@ post.
 
 Run `/blog rewrite <file>` on each, starting from lowest score.
 ```
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

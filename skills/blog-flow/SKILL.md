@@ -14,6 +14,8 @@ metadata:
   author: AgriciDaniel
   version: "2.1.1"
   category: blog
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # FLOW Framework for Bloggers (Find, Optimize, Win)
@@ -191,3 +193,5 @@ license header injected by the sync script.
 | `sync_flow.py` network error | Display the script's stderr. Check rate limits with `gh api rate_limit` if `gh` is installed. |
 | `sync_flow.py` 403 after retry | Set `GITHUB_TOKEN` or run `gh auth login`, then retry. |
 | Path-traversal abort | The sync target tried to escape the references directory. Inspect the upstream repo and pin to a known-good `--ref`. |
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

@@ -27,6 +27,9 @@ test('portable install (codex/opencode/antigravity/agents) produces spec-clean, 
       const keys = fm.blocks.map((b) => b.key);
       assert.deepEqual(keys.filter((k) => !SPEC_KEYS.includes(k)), [], `${name}/${d} has non-spec keys`);
       assert.ok(keys.includes('name') && keys.includes('description'), `${name}/${d}`);
+      const txt = readFileSync(join(dest, d, 'SKILL.md'), 'utf8');
+      assert.match(txt, /maintainer: "Alpit Patel"/, `${name}/${d} lost the maintainer`);
+      assert.ok(txt.includes('maintained by Alpit Patel'), `${name}/${d} lost the kit mark`);
     }
     for (const f of allMd(dest).filter((p) => !p.includes('vendor'))) {
       const t = readFileSync(f, 'utf8');

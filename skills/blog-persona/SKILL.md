@@ -10,6 +10,9 @@ description: >
 user-invokable: true
 argument-hint: "[create|list|use|show] [persona-name]"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Persona - Writing Voice Management
@@ -224,3 +227,5 @@ expects the score to move after persona activation.
 - **Empty personas directory**: When running list or show with no personas saved, prompt the user to create one first
 - **Name conflicts**: If a persona name already exists during create, ask whether to overwrite or choose a different name
 - **Malformed JSON**: If a persona file is corrupted, report the error and offer to recreate it from the interview
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

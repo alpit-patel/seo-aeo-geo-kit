@@ -9,6 +9,9 @@ description: >
 version: 1.0.0
 tags: [geo, business, delta, monthly, reporting, client, progress]
 allowed-tools: Read, Write, Bash, Glob
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO Monthly Delta Report Generator
@@ -305,3 +308,5 @@ fresh audit that weren't visible before. Frame declines as "newly discovered opp
    On track for Month 6 target: YES (65/100)
    ```
 3. Suggest next action: "Share with client or run `/geo report-pdf` for a visual version"
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

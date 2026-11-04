@@ -12,6 +12,9 @@ description: >
 user-invokable: true
 argument-hint: "<topic>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Brief Generator: Content Planning
@@ -279,3 +282,5 @@ statistic for every section.
 
 Save to the user's project as `briefs/[slug]-brief.md` or to a location
 they specify. Create the `briefs/` directory if it does not exist. Confirm the brief is ready for `/blog write`.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

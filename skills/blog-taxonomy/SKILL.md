@@ -11,6 +11,9 @@ description: >
 user-invokable: true
 argument-hint: "[suggest|sync|audit] [file-or-cms]"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Taxonomy
@@ -285,3 +288,5 @@ checks or disable redirects, cap timeouts at 10 seconds, and enforce
 - **Duplicate tag slugs**: If a tag already exists on the CMS, skip creation and note "Tag already exists: [name]"
 - **Rate limits**: If the CMS API returns 429, honor `Retry-After` when present; otherwise use exponential backoff and retry once. Report if the limit persists
 - **Unsupported CMS**: If CMS_TYPE is not one of the 5 supported platforms, list the valid options and exit
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

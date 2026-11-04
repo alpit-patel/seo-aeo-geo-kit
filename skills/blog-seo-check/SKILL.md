@@ -12,6 +12,9 @@ description: >
 user-invokable: true
 argument-hint: "<file-path>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog SEO Check: Post-Writing Validation
@@ -264,3 +267,5 @@ If the post has a published URL and blog-google credentials are available:
    - Top 3 opportunities with estimated savings
 4. If skipped, report the reason: `SKIPPED: credentials unavailable`,
    `SKIPPED: unpublished URL`, or the specific PageSpeed error.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

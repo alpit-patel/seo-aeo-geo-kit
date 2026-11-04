@@ -50,6 +50,9 @@ for (const d of skillDirs) {
   if (!fm.description || fm.description.length < 30) err(`${d}: description missing or too short`);
   if (fm.description && fm.description.length > 1024) warn(`${d}: description over 1024 chars`);
   if (/\b(TODO|FIXME)\b|lorem ipsum/.test(text)) warn(`${d}: contains TODO/FIXME`);
+  const fmText = text.replace(/\r\n/g, '\n').split('\n---')[0];
+  if (!/^\s+maintainer:\s*"Alpit Patel"/m.test(fmText)) err(`${d}: metadata.maintainer "Alpit Patel" is missing`);
+  if (!text.includes('<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel')) err(`${d}: kit mark comment is missing`);
 }
 
 // 2. registry + routing csv

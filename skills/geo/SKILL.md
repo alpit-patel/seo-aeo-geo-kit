@@ -10,6 +10,9 @@ description: >
   "AI search", "AI visibility", "optimize", "citability", "llms.txt", "schema",
   "brand mentions", "GEO report", or any URL for analysis.
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO-SEO Analysis Tool — Claude Code Skill (February 2026)
@@ -248,3 +251,5 @@ Bundled at `../../vendor/geo-seo-claude/templates/`:
 # Generate a client-ready report
 /geo report https://example.com
 ```
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

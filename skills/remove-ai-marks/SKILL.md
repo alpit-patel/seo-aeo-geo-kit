@@ -8,6 +8,9 @@ description: >
   watermarks, remove C2PA/Content Credentials, clean AI metadata, remove invisible
   Unicode, anti-detect clean AI output, or runs /remove-ai-marks (aliases:
   /remove-claude-marks).
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Remove AI marks
@@ -370,3 +373,5 @@ Always state:
 If `$WM/health` fails: tell the user the service is down and how to start it
 (`docker compose up -d`, `make serve`, or the published GHCR image). Do **not**
 attempt to clean locally — this skill contains no cleaning code.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

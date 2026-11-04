@@ -12,6 +12,9 @@ description: >
 user-invokable: true
 argument-hint: "<niche>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Strategy: Positioning & Content Architecture
@@ -376,3 +379,5 @@ Output format:
 3. Run `/blog write` to generate the first article
 4. Set up AI citation monitoring for target queries
 ```
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

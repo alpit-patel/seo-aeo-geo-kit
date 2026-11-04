@@ -8,6 +8,9 @@ allowed-tools:
   - Bash
   - WebFetch
   - Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO Audit Orchestration Skill
@@ -335,3 +338,5 @@ Generate a file called `GEO-AUDIT-REPORT.md` with the following structure:
 - Extra weight on: Case studies (citability), expertise demonstration, thought leadership
 - Check for: Portfolio schema, team credentials, industry-specific expertise signals
 - Key schema: Organization, Service, Person (team), Review
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

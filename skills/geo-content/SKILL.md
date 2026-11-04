@@ -5,6 +5,9 @@ version: 1.0.0
 author: geo-seo-claude
 tags: [geo, content-quality, eeat, citability, ai-content, topical-authority]
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO Content Quality & E-E-A-T Assessment
@@ -343,3 +346,5 @@ Date: [Date]
 ### Author/E-E-A-T Improvements
 [Specific steps to strengthen E-E-A-T signals]
 ```
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

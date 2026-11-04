@@ -5,6 +5,9 @@ version: 1.0.0
 author: geo-seo-claude
 tags: [geo, technical-seo, core-web-vitals, ssr, crawlability, security, performance]
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO Technical SEO Audit
@@ -530,3 +533,5 @@ This site serves clean Markdown to AI agents on request. AI crawlers that suppor
 ## Detailed Findings
 [Per-category breakdown with evidence]
 ```
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

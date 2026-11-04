@@ -16,6 +16,8 @@ metadata:
   author: AgriciDaniel
   version: "2.1.1"
   source: "https://github.com/PleasePrompto/notebooklm-skill"
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog NotebookLM: Source-Grounded Research from Your Documents
@@ -253,3 +255,5 @@ All data stored inside the skill directory:
 Load on-demand: do NOT load all at startup:
 - `references/commands.md`: Full CLI commands, parameters, and workflow patterns
 - `references/troubleshooting.md`: Error solutions, recovery procedures, debugging
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

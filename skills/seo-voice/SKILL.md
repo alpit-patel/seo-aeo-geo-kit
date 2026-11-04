@@ -9,10 +9,12 @@ description: >
   asks how a business shows up in spoken answers. Not for building AI voice agents (that is a
   product/service task, not search).
 metadata:
-  author: SEO/AEO/GEO Skills Project
+  author: Alpit Patel
   version: "1.0.0"
   category: seo
   verified: "2026-09-30"
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # VEO: voice engine optimization
@@ -73,3 +75,5 @@ primary source or say it is not measured.
 A short VEO report: local-listing gaps, pages with question headings but no stand-alone answer,
 pages missing a call path, schema gaps, conversational-query share and its trend, and a prioritized
 fix list (impact x confidence / effort).
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

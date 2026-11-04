@@ -17,6 +17,8 @@ metadata:
   author: AgriciDaniel
   version: "2.1.1"
   category: blog
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 user-invokable: true
 argument-hint: "[plan|execute] [seed-keyword|cluster-plan.json]"
 ---
@@ -337,3 +339,5 @@ Return a concise summary to the user with totals, the scorecard path, and the ne
 | `blog-outline` | Generates a single SERP-informed outline | blog-cluster generates an outline-equivalent across an entire cluster, then writes the posts. |
 
 blog-cluster is the general contractor: it analyzes the topic, draws the data-driven plan, and builds the entire structure from a single seed keyword.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

@@ -13,6 +13,8 @@ compatibility: Requires Claude Code and Python 3.11+ for quality scoring
 metadata:
   author: AgriciDaniel
   version: "2.1.1"
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 user-invokable: true
 argument-hint: "[write|rewrite|analyze|brief|calendar|cannibalization|strategy|outline|seo-check|schema|repurpose|geo|image|audit|factcheck|persona|brand|discourse|taxonomy|notebooklm|audio|google|update|cluster|flow|style|decay] [topic-or-file]"
 ---
@@ -336,3 +338,5 @@ DISCOURSE.md adds a recency-and-engagement lens to research (what real practitio
 | Use tier 4-5 sources | Low authority hurts E-E-A-T |
 | Generate low-value variations without research | Scaled, interchangeable pages fail the reader-value and evidence requirements |
 | Skip visual elements entirely | Blogs with images get significantly more views and social engagement |
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

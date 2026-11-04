@@ -5,6 +5,9 @@ version: 2.0.0
 author: geo-seo-claude
 tags: [geo, pdf, report, client-deliverable, professional]
 allowed-tools: Read, Grep, Glob, Bash, Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO PDF Report Generator (pandoc pipeline)
@@ -118,3 +121,5 @@ Tell the user:
 | PDF is blank / empty | Increase `--virtual-time-budget` to 8000 |
 | Cover metadata missing | Check GEO-AUDIT-REPORT.md has the standard header format |
 | Fonts not loading | PDF is rendered offline; system fonts are used as fallback — this is expected |
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

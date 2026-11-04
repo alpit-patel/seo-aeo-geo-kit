@@ -5,6 +5,9 @@ version: 1.0.0
 author: geo-seo-claude
 tags: [geo, ai-search, platform-optimization, chatgpt, perplexity, gemini, aio]
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO Platform Optimizer
@@ -273,3 +276,5 @@ Status thresholds: Strong = 70+, Moderate = 40-69, Weak = 0-39
 ### Strategic (this quarter)
 [Actions requiring entity building, community development, or platform presence]
 ```
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

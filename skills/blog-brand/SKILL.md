@@ -13,6 +13,9 @@ description: >
 user-invokable: true
 argument-hint: "[init|show|update]"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Brand: Durable Editorial Context
@@ -238,3 +241,5 @@ If no persona exists when `/blog brand init` runs, the voice questions still pro
 - **Files already exist on init**: ask whether to overwrite or run update instead.
 - **Persona referenced but missing**: ask whether to leave the persona reference blank or create one.
 - **Reader provides minimal answers**: prompt for at least 2 audience bullets and 3 editorial rules; refuse to write skeletons.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

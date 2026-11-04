@@ -5,6 +5,9 @@ version: 1.0.0
 author: geo-seo-claude
 tags: [geo, report, client-deliverable, executive-summary, action-plan]
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, Write
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # GEO Client Report Generator
@@ -397,3 +400,5 @@ Generate **GEO-CLIENT-REPORT.md** using the complete template above, filled with
 - Ready to send to a client without editing
 - Self-contained (no references to other report files — all relevant data is included)
 - Printable and presentable (clean markdown formatting)
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

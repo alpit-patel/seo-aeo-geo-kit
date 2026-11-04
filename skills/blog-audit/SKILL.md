@@ -9,6 +9,9 @@ description: >
 user-invokable: true
 argument-hint: "[directory]"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Audit: Full-Site Health Assessment
@@ -252,3 +255,5 @@ After saving, inform the user:
 ## Cross-reference
 
 For evidence-led audit prompts beyond this site-wide health pass, see `/blog flow optimize` (visibility, CTR, schema, extraction audits) and `/blog flow win` (dual-surface scorecard, conversion audit).
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

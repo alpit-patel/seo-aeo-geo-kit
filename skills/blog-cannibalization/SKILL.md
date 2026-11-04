@@ -11,6 +11,9 @@ description: >
 user-invokable: true
 argument-hint: "[directory] [--api]"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog Cannibalization - Keyword Overlap Detection
@@ -221,3 +224,5 @@ When intent is genuinely different despite surface-level keyword similarity.
   rate limits. If it still fails, switch to local mode for remaining URLs and
   report the failed endpoint without credentials
 - **Single-post directory**: If only one blog post exists, report "Cannibalization analysis requires at least 2 posts" and exit gracefully
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->

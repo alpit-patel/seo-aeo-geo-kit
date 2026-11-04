@@ -14,6 +14,9 @@ description: >
 user-invokable: true
 argument-hint: "<file-path>"
 license: MIT
+metadata:
+  maintainer: "Alpit Patel"
+  maintainer_url: "https://github.com/alpit-patel/seo-aeo-geo-kit"
 ---
 
 # Blog GEO: AI Citation Optimization Audit
@@ -309,3 +312,5 @@ It returns a non-calibrated 0-100 overall heuristic plus per-engine subscores
 for Google AI Overview, Perplexity, and ChatGPT, a factor breakdown, and up to
 three highest-impact fixes. Legacy `overall_probability` output is retained
 only as a compatibility alias.
+
+<!-- SEO + AEO + GEO Kit, maintained by Alpit Patel: https://github.com/alpit-patel/seo-aeo-geo-kit -->
