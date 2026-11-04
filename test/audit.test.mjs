@@ -79,3 +79,17 @@ test('URL errors are clear', async () => {
   await assert.rejects(() => auditUrl('ftp://example.com'), /http and https/);
   await assert.rejects(() => auditUrl('http://127.0.0.1:1/'), /Could not fetch/);
 });
+
+test('"Why choose us" is not a question heading', () => {
+  const r = auditHtml('<html lang="en"><body><h1>A</h1><h2>Why choose us</h2></body></html>');
+  assert.equal(r.results.find((x) => x.id === 'qheads').status, 'fail');
+  const q = auditHtml('<html lang="en"><body><h1>A</h1><h2>Why choose us?</h2></body></html>');
+  assert.equal(q.results.find((x) => x.id === 'qheads').status, 'pass');
+});
+
+test('reads nested JSON-LD (author, sameAs, FAQ inside other nodes)', () => {
+  const html = `<html lang="en"><head><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","author":{"@type":"Person","name":"A","sameAs":["https://github.com/a"]},"datePublished":"2026-01-01","hasPart":{"@type":"FAQPage"}}</script></head><body><h1>x</h1></body></html>`;
+  const p = parsePage(html);
+  assert.ok(p.ldTypes.has('Person') && p.ldTypes.has('FAQPage'));
+  assert.ok(p.sameAs && p.author && p.date);
+});

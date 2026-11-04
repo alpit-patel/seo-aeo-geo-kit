@@ -1,0 +1,20 @@
+# Claude SEO + AEO + GEO Kit
+
+> Free, open-source kit for Claude Code: 82 skills for SEO, AEO (answer engines), GEO (AI search) and VEO (voice), plus a command-line auditor that scores any page 0-100 across SEO, AEO and GEO. MIT licensed. Runs locally.
+
+## Use it
+- Audit a page: `npx seo-aeo-geo-kit audit <url>` (add `--summary` for score and top fixes, `--json` for machine output)
+- Install in Claude Code: `/plugin marketplace add alpit-patel/seo-aeo-geo-kit` then `/plugin install seo-aeo-geo-kit@seo-aeo-geo-kit`
+- Copy skills only: `npx seo-aeo-geo-kit install --only geo`
+
+## Docs
+- [Home page and FAQ](https://alpit-patel.github.io/seo-aeo-geo-kit/)
+- [Full skill list for LLMs](https://alpit-patel.github.io/seo-aeo-geo-kit/llms-full.txt)
+- [Source and README](https://github.com/alpit-patel/seo-aeo-geo-kit)
+- [Routing: which skill for which task](https://github.com/alpit-patel/seo-aeo-geo-kit/blob/main/system/routing.md)
+- [Quality gates](https://github.com/alpit-patel/seo-aeo-geo-kit/blob/main/system/quality-gates.md)
+- [Evidence policy](https://github.com/alpit-patel/seo-aeo-geo-kit/blob/main/system/evidence-policy.md)
+
+## Optional
+- [Third-party notices](https://github.com/alpit-patel/seo-aeo-geo-kit/blob/main/THIRD_PARTY_NOTICES.md)
+- [Contributing](https://github.com/alpit-patel/seo-aeo-geo-kit/blob/main/CONTRIBUTING.md)

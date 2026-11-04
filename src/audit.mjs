@@ -24,18 +24,29 @@ export function parsePage(html, url = '') {
   const internal = anchors.filter((a) => a && !/^(#|mailto:|tel:|javascript:)/i.test(a) && !abs.includes(a)).concat(abs.filter((a) => !external.includes(a)));
   const ld = [];
   for (const m of html.matchAll(/<script[^>]*type\s*=\s*["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
-    try { const j = JSON.parse(m[1]); (Array.isArray(j) ? j : j['@graph'] ? [j, ...j['@graph']] : [j]).forEach((x) => ld.push(x)); } catch { /* invalid JSON-LD */ }
+    try { ld.push(JSON.parse(m[1])); } catch { /* invalid JSON-LD */ }
   }
-  const types = new Set(ld.flatMap((x) => [].concat(x?.['@type'] || [])));
+  // Walk every nested node: types, sameAs, author and dates often live below the top level.
+  const types = new Set(); let sameAsFound = false, authorFound = false, dateFound = false;
+  const walkLd = (n) => {
+    if (Array.isArray(n)) return n.forEach(walkLd);
+    if (!n || typeof n !== 'object') return;
+    for (const t of [].concat(n['@type'] || [])) if (typeof t === 'string') types.add(t);
+    if (n.sameAs) sameAsFound = true;
+    if (n.author) authorFound = true;
+    if (n.datePublished || n.dateModified) dateFound = true;
+    Object.values(n).forEach(walkLd);
+  };
+  walkLd(ld);
   const firstP = (() => { const m = body.match(/<\/h1>[\s\S]*?<p\b[^>]*>([\s\S]*?)<\/p>/i) || body.match(/<p\b[^>]*>([\s\S]*?)<\/p>/i); return m ? strip(m[1]) : ''; })();
   return {
     url, title, description: meta('description'), canonical, viewport: meta('viewport'), lang: (html.match(/<html\b[^>]*\blang\s*=\s*["']?([a-zA-Z-]+)/i) || [])[1] || null,
     h1: h(1), h2: h(2), h3: h(3), imgs: imgs.length, imgsWithAlt: imgs.filter((t) => (attr(t, 'alt') || '').trim()).length,
     internalLinks: internal.length, externalLinks: external.length, words: words(text), text, firstParagraphWords: words(firstP),
     lists: (body.match(/<(ul|ol|table)\b/gi) || []).length, ldTypes: types, hasLd: ld.length > 0,
-    author: !!(meta('author') || ld.some((x) => x?.author) || /rel\s*=\s*["']author["']/i.test(html) || /\bby\s+[A-Z][a-z]+/.test(text.slice(0, 1500))),
-    date: !!(meta('article:published_time') || meta('date') || ld.some((x) => x?.datePublished || x?.dateModified) || /<time\b/i.test(html)),
-    sameAs: ld.some((x) => x?.sameAs), numbers: (text.match(/\b\d[\d,.]*%?/g) || []).length, ogTitle: !!meta('og:title'), ogImage: !!meta('og:image'),
+    author: !!(meta('author') || authorFound || /rel\s*=\s*["']author["']/i.test(html) || /\bby\s+[A-Z][a-z]+/.test(text.slice(0, 1500))),
+    date: !!(meta('article:published_time') || meta('date') || dateFound || /<time\b/i.test(html)),
+    sameAs: sameAsFound, numbers: (text.match(/\b\d[\d,.]*%?/g) || []).length, ogTitle: !!meta('og:title'), ogImage: !!meta('og:image'),
   };
 }
 
@@ -72,7 +83,7 @@ const CHECKS = [
   ['faq', 'AEO', 8, 'FAQ markup or question headings', (p) => p.ldTypes.has('FAQPage') || p.ldTypes.has('Question') || [...p.h2, ...p.h3].filter((x) => /\?$/.test(x)).length >= 2, 'Add an FAQ section with real questions and FAQPage schema.'],
   ['answer', 'AEO', 7, 'Answer-first opening (under 60 words)', (p) => p.firstParagraphWords > 0 && p.firstParagraphWords <= 60, 'Open with a direct 1-3 sentence answer under 60 words before any background.'],
   ['lists', 'AEO', 4, 'Lists or tables for scannable answers', (p) => p.lists >= 1, 'Add a list or table that answers the main question at a glance.'],
-  ['qheads', 'AEO', 3, 'Question-style headings', (p) => [...p.h2, ...p.h3].some((x) => /^(what|how|why|when|where|who|which|can|does|is|are|should)\b/i.test(x)), 'Phrase some headings as the questions people ask.'],
+  ['qheads', 'AEO', 3, 'Question-style headings', (p) => [...p.h2, ...p.h3].some((x) => /\?$/.test(x)), 'Phrase at least one heading as a real question people ask (ending in ?).'],
   ['article', 'AEO', 2, 'Page-type schema (Article/Service/Product/etc.)', (p) => ['Article', 'BlogPosting', 'Service', 'Product', 'HowTo', 'WebPage', 'LocalBusiness'].some((t) => p.ldTypes.has(t)), 'Add schema that matches the page type.'],
   ['bots', 'GEO', 8, 'robots.txt allows AI crawlers', (p, c) => (c.robots == null ? null : AI_BOTS.slice(0, 4).every((b) => c.robots(b))), 'Allow GPTBot, ClaudeBot, PerplexityBot and Google-Extended in robots.txt if you want AI citations.'],
   ['llms', 'GEO', 5, 'llms.txt present', (p, c) => (c.llms == null ? null : c.llms), 'Publish /llms.txt describing your site for AI systems.'],

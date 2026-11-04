@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url><loc>https://alpit-patel.github.io/seo-aeo-geo-kit/</loc><lastmod>2026-11-04</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
+    <image:image><image:loc>https://alpit-patel.github.io/seo-aeo-geo-kit/images/social.png</image:loc><image:caption>Claude SEO + AEO + GEO Kit</image:caption></image:image>
+    <image:image><image:loc>https://alpit-patel.github.io/seo-aeo-geo-kit/images/pillars.png</image:loc><image:caption>SEO, AEO, GEO and VEO pillars</image:caption></image:image>
+    <image:image><image:loc>https://alpit-patel.github.io/seo-aeo-geo-kit/images/audit-card.png</image:loc><image:caption>Sample page audit report</image:caption></image:image>
+    <video:video><video:thumbnail_loc>https://alpit-patel.github.io/seo-aeo-geo-kit/images/demo-poster.png</video:thumbnail_loc><video:title>Claude SEO + AEO + GEO Kit demo</video:title><video:description>Audit a page for SEO, AEO and GEO from the terminal and see the top fixes.</video:description><video:content_loc>https://alpit-patel.github.io/seo-aeo-geo-kit/demo.mp4</video:content_loc><video:duration>18</video:duration></video:video>
+  </url>
+</urlset>

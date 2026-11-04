@@ -16,7 +16,7 @@ const HELP = `seo-aeo-geo-kit ${pkg.version}
 SEO + AEO + GEO skills for Claude Code, plus a free page auditor.
 
 Usage:
-  npx seo-aeo-geo-kit audit <url|file.html> [--json]   Score a page 0-100 for SEO, AEO and GEO
+  npx seo-aeo-geo-kit audit <url|file.html> [--summary|--json]   Score a page 0-100 for SEO, AEO and GEO
   npx seo-aeo-geo-kit list [--family SEO|GEO|Blog|Growth|Text]
   npx seo-aeo-geo-kit install [--global] [--only seo,geo,blog] [--dest <dir>] [--force]
 
@@ -38,7 +38,7 @@ async function audit() {
   console.log(`\n${r.url}\n\nScore: ${r.total}/100\n`);
   for (const p of ['SEO', 'AEO', 'GEO']) console.log(`  ${p}  ${bar(r.pillars[p])}`);
   console.log('');
-  for (const p of ['SEO', 'AEO', 'GEO']) {
+  if (!flag('--summary')) for (const p of ['SEO', 'AEO', 'GEO']) {
     console.log(p);
     for (const c of r.results.filter((x) => x.pillar === p)) console.log(`  ${c.status === 'pass' ? '✓' : c.status === 'fail' ? '✗' : '–'} ${c.label}${c.status === 'n/a' ? ' (not checked)' : ''}`);
   }
