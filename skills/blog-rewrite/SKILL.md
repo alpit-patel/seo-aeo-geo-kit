@@ -356,10 +356,10 @@ Before presenting the rewritten draft, run the 5-gate delivery contract per `ski
 
 Steps:
 
-1. **Hero check**: if the existing post already has a hero image referenced and still on disk, keep it. If the rewrite changed the topic substantially OR the hero is missing, regenerate via `python3 scripts/generate_hero.py --topic "<new title>" --tags "<tags>" --out <folder>`.
-2. **Re-render**: run `python3 scripts/blog_render.py --md <slug>.md --out-dir <folder>` to refresh the `.html` and `.pdf` from the updated `.md`.
+1. **Hero check**: if the existing post already has a hero image referenced and still on disk, keep it. If the rewrite changed the topic substantially OR the hero is missing, regenerate via `python3 "\${CLAUDE_PLUGIN_ROOT}/scripts/generate_hero.py" --topic "<new title>" --tags "<tags>" --out <folder>`.
+2. **Re-render**: run `python3 "\${CLAUDE_PLUGIN_ROOT}/scripts/blog_render.py" --md <slug>.md --out-dir <folder>` to refresh the `.html` and `.pdf` from the updated `.md`.
 3. **Reviewer dispatch**: dispatch the `blog-reviewer` agent against the rendered `.html`. Threshold: score 90/100 or higher AND zero P0 issues.
-4. **Preflight**: run `python3 scripts/blog_preflight.py --draft <folder> --strict`. Exit 0 = ship; exit 1 = block.
+4. **Preflight**: run `python3 "\${CLAUDE_PLUGIN_ROOT}/scripts/blog_preflight.py" --draft <folder> --strict`. Exit 0 = ship; exit 1 = block.
 5. **Iterate on failure**: maximum 3 iterations. After the 3rd failure, STOP and present the diagnostic from `<folder>/preflight-report.json`.
 
 Rewrites have a higher implicit threshold because the existing draft was presumably already published. Re-presenting something worse than the original is not acceptable. If the rewritten score is lower than the original score, that itself is a P0 condition.

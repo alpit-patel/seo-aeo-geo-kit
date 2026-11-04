@@ -305,7 +305,7 @@ For a per-engine readiness view (distinct
 from the 15-point AI Citation Readiness category scored by `/blog analyze`), run:
 
 ```bash
-python3 scripts/ai_citation_score.py <file> --format markdown
+python3 "\${CLAUDE_PLUGIN_ROOT}/scripts/ai_citation_score.py" <file> --format markdown
 ```
 
 It returns a non-calibrated 0-100 overall heuristic plus per-engine subscores

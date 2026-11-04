@@ -91,7 +91,7 @@ For tools other than Claude Code the installer makes each skill portable: it kee
 
 ## Helper scripts (optional)
 
-Many skills call Python helpers (page rendering, Google Search Console and GA4, PageSpeed, schema validation, and more). All 42 that the skills reference are bundled in [`scripts/`](scripts/). They run through a managed, sandboxed Python environment (Python 3.11 to 3.14), created the first time you run `/seo setup` inside Claude Code. Some use optional services such as Google or Moz and need your own keys. The kit works without them: skills fall back to manual checks.
+Many skills call Python helpers (page rendering, Google Search Console and GA4, PageSpeed, schema validation, and more). All 42 that the skills reference are bundled in [`scripts/`](scripts/), plus 11 standard-library blog helpers (render, preflight gates, prose lint, readability) that run with plain Python and need no setup. They run through a managed, sandboxed Python environment (Python 3.11 to 3.14), created the first time you run `/seo setup` inside Claude Code. Some use optional services such as Google or Moz and need your own keys. The kit works without them: skills fall back to manual checks.
 
 ## What the auditor checks
 
@@ -114,7 +114,7 @@ No. Nobody can. It gives you a repeatable process and a checklist.
 No. The auditor and most skills need none. A few helper scripts use optional services (Google Search Console, GA4, DataForSEO). When a helper script is not bundled, the skills fall back to manual checks and say so.
 
 ### Is my data sent anywhere?
-The auditor only fetches the URL you give it, plus that site's `robots.txt` and `llms.txt`. The skills run inside Claude Code under your own settings.
+The auditor only fetches the URL you give it, plus that site's `robots.txt` and `llms.txt`. The skills run inside your own agent (Claude Code, Codex, OpenCode or Antigravity) under your own settings.
 
 ## Credits
 

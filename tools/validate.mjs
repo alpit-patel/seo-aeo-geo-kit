@@ -114,7 +114,14 @@ const bundled = new Set(walk(ROOT).filter((f) => f.endsWith('.py')).map((f) => f
 const wanted = new Map();
 for (const f of walk(SKILLS)) {
   if (!f.endsWith('.md')) continue;
-  for (const m of readFileSync(f, 'utf8').matchAll(/claude-seo"? run ([a-z0-9_]+\.py)/g)) wanted.set(m[1], (wanted.get(m[1]) || 0) + 1);
+  const text = readFileSync(f, 'utf8');
+  for (const m of text.matchAll(/claude-seo"? run ([a-z0-9_]+\.py)/g)) wanted.set(m[1], (wanted.get(m[1]) || 0) + 1);
+  // Direct stdlib helpers: python3 "${CLAUDE_PLUGIN_ROOT}/scripts/x.py" or "$BLOG_SCRIPT_DIR/x.py". These must be bundled.
+  for (const m of text.matchAll(/(?:\$\{CLAUDE_PLUGIN_ROOT\}\/scripts|\$BLOG_SCRIPT_DIR)\/([a-z0-9_]+\.py)/g)) {
+    if (!bundled.has(m[1])) err(`${f.slice(ROOT.length + 1)} calls ${m[1]}, which is not bundled in scripts/`);
+  }
+  // Paths into a personal Claude install never resolve for other users or other agents.
+  if (/\$HOME\/\.claude\/scripts|~\/\.claude\/skills\/[a-z-]+\/scripts/.test(text)) err(`${f.slice(ROOT.length + 1)} points at a personal ~/.claude scripts folder`);
 }
 const missing = [...wanted.keys()].filter((n) => !bundled.has(n)).sort();
 if (!existsSync(join(ROOT, 'scripts', 'claude-seo'))) err('scripts/claude-seo launcher is missing');

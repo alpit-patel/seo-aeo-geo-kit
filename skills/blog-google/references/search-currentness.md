@@ -10,7 +10,7 @@ Resolve the ledger in this order:
    `data/google-updates.json`.
 2. In a standalone install, use `data/google-updates.json` beside the main
    blog orchestrator skill, normally
-   `~/.claude/skills/blog/data/google-updates.json`.
+   `blog/data/google-updates.json` in the installed skills folder.
 
 Do not substitute a same-named file from the current working directory. If
 neither trusted location exists, report the ledger as unavailable and continue

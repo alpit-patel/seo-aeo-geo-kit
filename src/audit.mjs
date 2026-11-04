@@ -136,9 +136,17 @@ export async function auditUrl(url, opts = {}) {
   if (!page.text.trim()) throw new Error(`${u.href} returned an empty page.`);
   const origin = new URL(page.url).origin;
   const [rb, ll] = await Promise.allSettled([get(origin + '/robots.txt', opts), get(origin + '/llms.txt', opts)]);
+  const isLlms = (r) => r.status === 'fulfilled' && r.value.ok && !/<html/i.test(r.value.text.slice(0, 300));
+  let llms = ll.status === 'fulfilled' ? isLlms(ll) : null;
+  // Sites served from a sub-path (GitHub project pages, /docs/ sites) keep llms.txt beside the page.
+  const base = new URL('.', page.url);
+  if (llms !== true && base.pathname !== '/') {
+    const [sub] = await Promise.allSettled([get(base.href + 'llms.txt', opts)]);
+    if (isLlms(sub)) llms = true;
+  }
   const ctx = {
     robots: rb.status === 'fulfilled' && rb.value.ok && !/<html/i.test(rb.value.text) ? parseRobots(rb.value.text) : rb.status === 'fulfilled' && rb.value.status === 404 ? () => true : null,
-    llms: ll.status === 'fulfilled' ? ll.value.ok && !/<html/i.test(ll.value.text.slice(0, 300)) : null,
+    llms,
   };
   return { url: page.url, ...score(parsePage(page.text, page.url), ctx), page: undefined };
 }

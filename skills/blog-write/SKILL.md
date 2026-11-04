@@ -515,7 +515,7 @@ Before delivering, verify:
     catches the structural tells those miss.
 
 ### Phase 6.5: Delivery Contract Enforcement (v1.9.0)
-Before Phase 7, run the 5-gate delivery contract (via `python3 scripts/blog_preflight.py` plus a BLOCKING `blog-reviewer` agent) per `skills/blog/references/blog-delivery-contract.md` and the writer-specific checklist in `skills/blog-write/references/delivery.md`. Use `python3` for local scripts. The user is never the first reviewer; the gates are.
+Before Phase 7, run the 5-gate delivery contract (via `python3 "\${CLAUDE_PLUGIN_ROOT}/scripts/blog_preflight.py"` plus a BLOCKING `blog-reviewer` agent) per `skills/blog/references/blog-delivery-contract.md` and the writer-specific checklist in `skills/blog-write/references/delivery.md`. Use `python3` for local scripts. The user is never the first reviewer; the gates are.
 On any block, capture `<folder>/preflight-report.json`, re-dispatch the blog-writer agent with the diagnostic as input, and re-run the gated steps. Maximum 3 iterations. On the 3rd failure, stop and present the failure diagnostic instead of the draft.
 
 ### Phase 7: Delivery

@@ -48,7 +48,7 @@ Implementation split: `scripts/blog_render.py` renders `.html` and `.pdf` from t
 
 ### Optional hygiene pass (non-blocking)
 
-After rendering and before Gate 3, you may run `python3 scripts/blog_hygiene.py --md <slug>.md --html <slug>.html --apply` to auto-apply judgment-free fixes: add `loading="lazy"` to images that lack it and insert a Table of Contents on posts over 2000 words. It is optional, never blocks delivery, and reports any images missing alt text (which a human must fill in). It does not replace any gate.
+After rendering and before Gate 3, you may run `python3 "\${CLAUDE_PLUGIN_ROOT}/scripts/blog_hygiene.py" --md <slug>.md --html <slug>.html --apply` to auto-apply judgment-free fixes: add `loading="lazy"` to images that lack it and insert a Table of Contents on posts over 2000 words. It is optional, never blocks delivery, and reports any images missing alt text (which a human must fill in). It does not replace any gate.
 
 ## Gate 3: Visual Verification
 
