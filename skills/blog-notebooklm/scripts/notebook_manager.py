@@ -11,6 +11,13 @@ import uuid
 import os
 import re
 import sys
+# Windows consoles may use a legacy code page; keep emoji output from crashing.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(errors='replace')
+    except (AttributeError, ValueError):
+        pass
+
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 from datetime import datetime

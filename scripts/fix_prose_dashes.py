@@ -1,6 +1,12 @@
 # Replace prose em/en dashes: number ranges -> hyphen or "to", dash pairs -> parentheses, single dash -> colon (period if the sentence already has one).
 # Skips code fences, CSS content:, regex/split lines, // comments. Usage: python fix_prose_dashes.py <files...>. ALWAYS review git diff and rebuild: range parsers may expect dashes.
 import re, sys, glob
+def _usage_exit(code):
+    print('Usage: python fix_prose_dashes.py <files...>  (review git diff afterwards)')
+    sys.exit(code)
+if len(sys.argv) > 1 and sys.argv[1] in ('-h', '--help'): _usage_exit(0)
+if len(sys.argv) < 2: _usage_exit(2)
+
 D = '\u2014\u2013'
 def fix_sentence(s):
     # punctuation dashes: between word chars/quotes/parens, spaced or tight, not lone table cells

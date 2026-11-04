@@ -6,6 +6,13 @@ Manages virtual environment and dependencies automatically
 
 import os
 import sys
+# Windows consoles may use a legacy code page; keep emoji output from crashing.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(errors='replace')
+    except (AttributeError, ValueError):
+        pass
+
 import subprocess
 import venv
 import hashlib

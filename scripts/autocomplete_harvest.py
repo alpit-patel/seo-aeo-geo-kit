@@ -1,6 +1,12 @@
 # Google Autocomplete harvest. Usage: python autocomplete_harvest.py <seeds.json {"site":[seeds]}> <out.json>
 # Prefixes + a-z per seed via suggestqueries.google.com (client=firefox). No volumes: autocomplete shows demand exists, not size.
 import json, sys, time, urllib.request, urllib.parse, concurrent.futures as cf
+def _usage_exit(code):
+    print('Usage: python autocomplete_harvest.py <seeds.json> <out.json>  (seeds.json: {"site": ["seed", ...]})')
+    sys.exit(code)
+if len(sys.argv) > 1 and sys.argv[1] in ('-h', '--help'): _usage_exit(0)
+if len(sys.argv) < 3: _usage_exit(2)
+
 seeds = json.load(open(sys.argv[1], encoding='utf-8'))
 PRE = ['how to', 'how much', 'what is', 'why is', 'why does', 'can', 'does', 'is', 'which', 'best']
 def q(term):

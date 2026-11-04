@@ -1,6 +1,12 @@
 # Editorial scan: hidden Unicode (Layer A), em/en dashes, stock AI phrasing. Usage: python ai_marks_scan.py '{"name":["glob",...]}' <out.json>
 # Read hits in context: "Elevate" (monday event) and dash-only table cells are false positives.
 import re, sys, glob, json, collections
+def _usage_exit(code):
+    print('Usage: python ai_marks_scan.py \'{"name":["glob",...]}\' <out.json>')
+    sys.exit(code)
+if len(sys.argv) > 1 and sys.argv[1] in ('-h', '--help'): _usage_exit(0)
+if len(sys.argv) < 3: _usage_exit(2)
+
 HIDDEN = re.compile('[\u200b-\u200f\u2060-\u2064\ufeff\u202a-\u202e\u2066-\u2069\u00ad\u180e\U000e0000-\U000e007f]')
 DASH = re.compile('[\u2014\u2013]')
 WORDS = r"delve|tapestry|testament|pivotal|seamless(?:ly)?|game[- ]changer|unlock(?:s|ing)?|elevate|in today's|fast-paced|ever-evolving|evolving landscape|landscape of|it'?s important to note|let'?s dive|dive in|deep dive|navigate the|embark|realm|cutting-edge|harness|underscore[sd]?|showcas(?:e|es|ing)|vibrant|meticulous(?:ly)?|fostering|bolster(?:ed)?|intricate|crucial|robust|additionally|moreover|furthermore|in conclusion|whether you'?re|not just|not only|more than just|here'?s the thing|the real question|at its core|stands as|serves as|plays a (?:key|crucial|pivotal) role|look no further|rest assured|peace of mind|supercharge|empower(?:s|ing)?|revolutioniz\w+|transformative|in the world of"

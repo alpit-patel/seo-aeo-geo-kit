@@ -6,6 +6,13 @@ Ensures all scripts run with the correct virtual environment
 
 import os
 import sys
+# Windows consoles may use a legacy code page; keep emoji output from crashing.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(errors='replace')
+    except (AttributeError, ValueError):
+        pass
+
 import subprocess
 import hashlib
 from pathlib import Path

@@ -1,6 +1,6 @@
 {
   "name": "seo-aeo-geo-kit",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "83 SEO, AEO and GEO skills for Claude Code, Codex, OpenCode and Antigravity (Agent Skills format) plus a free page auditor that scores any page 0-100.",
   "type": "module",
   "bin": {
