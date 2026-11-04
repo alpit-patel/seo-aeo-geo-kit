@@ -18,3 +18,8 @@ The original work in this kit (the auditor CLI, validator, launcher, routing and
 - `vendor/geo-seo-claude/` is from [zubair-trabzada/geo-seo-claude](https://github.com/zubair-trabzada/geo-seo-claude), Copyright (c) 2026 Zubair Trabzada, MIT. Its license is in `vendor/geo-seo-claude/LICENSE`.
 
 If you are an author listed here and want a change to attribution, please open an issue.
+
+## Bundled helper tooling
+
+- `scripts/` (the Python helpers, launcher and runtime other than the seven genericized scripts listed in the README), `agents/`, `schema/`, `data/`, `requirements.txt` and the `seo-ecommerce` skill are from [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.5.0 (commit `6be93f4`), Copyright (c) 2026 agricidaniel, MIT. The full license text is in `LICENSES/claude-seo.txt`. The `seo-ecommerce` skill also credits its original author, Matej Marjanovic, in its metadata.
+- Not included from that project: `hooks/` (they run code automatically on file edits) and `extensions/` (optional third-party MCP servers).

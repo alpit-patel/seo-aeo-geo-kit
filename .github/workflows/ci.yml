@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Compile all Python helpers
-        run: python -m compileall -q scripts skills
-      - name: Launcher reports missing helpers clearly
+        run: python -m compileall -q scripts agents skills
+      - name: Runtime launcher rejects unknown scripts
         run: |
-          python scripts/claude-seo run definitely_missing.py; test $? -eq 3
+          python scripts/runtime.py run definitely_missing.py; test $? -eq 2

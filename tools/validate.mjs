@@ -11,7 +11,7 @@ const err = (m) => errors.push(m), warn = (m) => warnings.push(m);
 
 const skillDirs = readdirSync(SKILLS, { withFileTypes: true }).filter((d) => d.isDirectory() && existsSync(join(SKILLS, d.name, 'SKILL.md'))).map((d) => d.name).sort();
 const skillSet = new Set(skillDirs);
-const agentSet = new Set(walk(SKILLS).filter((f) => /[\\/]agents[\\/][^\\/]+\.md$/.test(f)).map((f) => f.split(/[\\/]/).pop().replace(/\.md$/, '')));
+const agentSet = new Set([...walk(SKILLS), ...(existsSync(join(ROOT, 'agents')) ? walk(join(ROOT, 'agents')) : [])].filter((f) => /[\\/]agents[\\/][^\\/]+\.md$/.test(f)).map((f) => f.split(/[\\/]/).pop().replace(/\.md$/, '')));
 
 export function parseFrontmatter(text) {
   const m = text.replace(/\r\n/g, '\n').match(/^---\n([\s\S]*?)\n---/);

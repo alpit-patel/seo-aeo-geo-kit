@@ -1,39 +1,75 @@
-#!/usr/bin/env python3
-"""Launcher used by skills: `claude-seo run <script>.py [args...]`.
+#!/usr/bin/env bash
+set -euo pipefail
 
-Finds the helper script anywhere in this kit (skills/*/scripts, scripts, vendor/*/scripts) and runs it
-with the current Python. If the script is not bundled, it exits with code 3 and a clear message so the
-caller can fall back to a manual check (WebFetch, browser, or reasoning) instead of failing mysteriously.
-"""
-import os
-import subprocess
-import sys
-from pathlib import Path
+# Stable entry point for bundled Python tools. The launcher uses only shell
+# built-ins until a usable Python 3 interpreter has been identified.
+#
+# It lives in scripts/ rather than bin/ because hosted marketplaces reject any
+# plugin that ships a top-level bin/ directory. Skills, agents, and hooks call
+# it as "${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo"; runtime.py is a sibling.
+launcher_dir="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+runtime="${launcher_dir}/runtime.py"
 
-ROOT = Path(__file__).resolve().parent.parent
+if [[ ! -f "${runtime}" ]]; then
+    echo "Claude SEO runtime is missing. Reinstall Claude SEO." >&2
+    exit 2
+fi
 
+# Supported range. runtime.py (MIN_PYTHON, MAX_PYTHON) is the source of
+# truth; tests/test_python_range.py keeps this copy and install.ps1 in step.
+min_minor=11
+max_minor=14
 
-def find(name):
-    for base in (ROOT / "scripts", *sorted((ROOT / "skills").glob("*/scripts")), *sorted((ROOT / "vendor").glob("*/scripts"))):
-        p = base / name
-        if p.is_file():
-            return p
-    return None
+# Prints major.minor for the interpreter given as arguments, or nothing.
+probe_version() {
+    local version
+    version="$("$@" -c 'import sys; print("%d.%d" % sys.version_info[:2])' 2>/dev/null)" || return 1
+    printf '%s' "${version%$'\r'}"
+}
 
+in_range() {
+    [[ "$1" =~ ^3\.([0-9]+)$ ]] || return 1
+    (( BASH_REMATCH[1] >= min_minor && BASH_REMATCH[1] <= max_minor ))
+}
 
-def main(argv):
-    if len(argv) < 3 or argv[1] != "run":
-        print("usage: claude-seo run <script>.py [args...]", file=sys.stderr)
-        return 2
-    name = os.path.basename(argv[2])
-    path = find(name)
-    if path is None:
-        print(f"[claude-seo] helper script '{name}' is not bundled in this kit. "
-              "Continue without it: perform the check manually (fetch the page, read the HTML, or reason from the evidence) "
-              "and say in your report that the automated check was skipped.", file=sys.stderr)
-        return 3
-    return subprocess.call([sys.executable, str(path), *argv[3:]])
+range_text="3.${min_minor} to 3.${max_minor}"
 
+# An override is an executable path, not a shell command. Keeping it as one
+# array element prevents command injection and supports paths containing spaces.
+if [[ -n "${CLAUDE_SEO_PYTHON:-}" ]]; then
+    found="$(probe_version "${CLAUDE_SEO_PYTHON}" || true)"
+    if in_range "${found}"; then
+        exec "${CLAUDE_SEO_PYTHON}" "${runtime}" "$@"
+    fi
+    echo "CLAUDE_SEO_PYTHON must be Python ${range_text}. Found ${found:-no usable Python} at ${CLAUDE_SEO_PYTHON}." >&2
+    exit 2
+fi
 
-if __name__ == "__main__":
-    sys.exit(main(sys.argv))
+# Prefer the default interpreter when it is supported, so an existing runtime
+# keeps the Python it was built with. Otherwise take the newest supported
+# versioned one. The choice must be stable: runtime.py rebuilds when it changes.
+seen=""
+try_python() {
+    local found
+    command -v "$1" >/dev/null 2>&1 || return 1
+    found="$(probe_version "$@")" || return 1
+    if in_range "${found}"; then
+        exec "$@" "${runtime}" "${script_args[@]+"${script_args[@]}"}"
+    fi
+    seen="${seen}${seen:+, }${found} ($*)"
+    return 1
+}
+
+script_args=("$@")
+try_python py -3 || true
+try_python python3 || true
+try_python python || true
+minor=${max_minor}
+while (( minor >= min_minor )); do
+    try_python py "-3.${minor}" || true
+    try_python "python3.${minor}" || true
+    minor=$(( minor - 1 ))
+done
+
+echo "Claude SEO needs Python ${range_text}. Found: ${seen:-no Python}. Install Python 3.${max_minor} from python.org or set CLAUDE_SEO_PYTHON to a supported interpreter." >&2
+exit 2

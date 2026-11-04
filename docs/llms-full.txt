@@ -1,6 +1,6 @@
 # Claude SEO + AEO + GEO Kit: full skill list
 
-> 82 skills for Claude Code. Source: https://github.com/alpit-patel/seo-aeo-geo-kit
+> 83 skills for Claude Code. Source: https://github.com/alpit-patel/seo-aeo-geo-kit
 
 ## Blog skills (28)
 
@@ -33,7 +33,7 @@
 - `blog-taxonomy`: Content taxonomy
 - `blog-write`: Draft editorial content
 
-## SEO skills (26)
+## SEO skills (27)
 
 - `seo`: Master SEO router
 - `seo-agentic`: Audit and fix agent readiness: the Lighthouse Agentic Browsing fraction,
@@ -45,6 +45,7 @@
 - `seo-content-brief`: SEO content brief
 - `seo-dataforseo`: Search/SERP data
 - `seo-drift`: SEO drift detection
+- `seo-ecommerce`: Ecommerce SEO: product pages, Product schema, Shopping visibility, marketplace signals
 - `seo-flow`: SEO workflow orchestration
 - `seo-geo`: SEO + GEO integration
 - `seo-google`: Google search analysis

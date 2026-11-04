@@ -37,47 +37,48 @@ id,skill,family,purpose,stage,inputs,output,qa
 36,seo-content-brief,SEO,SEO content brief,Planning,"SERP, intent, business goal",SEO brief,specific intent and evidence
 37,seo-dataforseo,SEO,Search/SERP data,Research,market/query scope,keyword/SERP data,date/market recorded
 38,seo-drift,SEO,SEO drift detection,Monitoring,historical/current data,drift diagnosis,site vs market causes separated
-39,seo-flow,SEO,SEO workflow orchestration,Orchestration,task + selected modules,execution flow,dependencies respected
-40,seo-geo,SEO,SEO + GEO integration,Optimization,SEO + GEO findings,integrated recommendations,no false GEO guarantees
-41,seo-google,SEO,Google search analysis,Research,queries/pages,Google SERP/indexation findings,time period documented
-42,seo-hreflang,SEO,International SEO/hreflang,Technical,locale URL model,hreflang plan/QA,bidirectional mapping checked
-43,seo-image-gen,SEO,Generate SEO visual assets,Creation,visual brief,image asset,brand/accessibility requirements met
-44,seo-images,SEO,Image SEO,Optimization,images/page context,filename/alt/caption/metadata,"descriptive, not spammy"
-45,seo-local,SEO,Local SEO,Specialized,business/location/services,local SEO plan,location facts verified
-46,seo-maps,SEO,Maps/local visibility,Local,business listing data,maps optimization plan,no fake locations
-47,seo-page,SEO,Individual page optimization,Optimization,page + intent,optimized page spec,search intent preserved
-48,seo-plan,SEO,SEO roadmap,Strategy,"audit, goals, resources",prioritized roadmap,impact/effort explicit
-49,seo-programmatic,SEO,Programmatic SEO,Scale,"template, data, intent model",programmatic system,pilot before scale
-50,seo-schema,SEO,Schema.org/JSON-LD,Technical,page/entity facts,schema graph/spec,accurate visible facts
-51,seo-sitemap,SEO,XML sitemap,Technical,URL inventory,sitemap plan/file,canonical/indexable URLs only
-52,seo-sxo,SEO,Search experience/conversion,Optimization,intent + page + conversion,SXO recommendations,UX not sacrificed for SEO
-53,seo-technical,SEO,Technical SEO,Technical,crawl/render/index data,technical fixes,severity + evidence
-54,seo-voice,SEO,VEO: voice engine optimization,Optimization,"pages, local listings, GSC data",VEO report + fixes,no untraceable voice stats; speakable news-only
-55,geo,GEO,Master GEO router,Routing,GEO objective/context,selected GEO workflow,measurable objective
-56,geo-audit,GEO,GEO visibility audit,Diagnosis,brand/entity/content/search data,GEO audit,observations sourced
-57,geo-brand-mentions,GEO,Brand mention intelligence,Authority,brand/entity landscape,mention map,sources verified
-58,geo-citability,GEO,Citation readiness,Optimization,content + source profile,citability improvements,no citation guarantee
-59,geo-compare,GEO,Competitor GEO comparison,Research,competitors/topics,comparison evidence,no unsupported rankings
-60,geo-content,GEO,Generative-search content,Creation,entity model + intent + evidence,GEO-ready content,useful to humans first
-61,geo-crawlers,GEO,AI crawler accessibility,Technical,robots/server/access data,crawler findings,platform behavior not assumed
-62,geo-llmstxt,GEO,llms.txt workflow,Technical,site architecture,llms.txt assessment/file,no ranking guarantee claims
-63,geo-platform-optimizer,GEO,Platform-specific optimization,Optimization,target AI/search platforms,platform recommendations,current platform behavior verified
-64,geo-proposal,GEO,GEO service proposal,Commercial,"scope, evidence, offer",proposal,no guaranteed outcomes
-65,geo-prospect,GEO,GEO prospect research,Sales,prospect/site,prospect brief,facts separated from hypotheses
-66,geo-report,GEO,GEO reporting,Measurement,visibility/mention/citation data,report,time period and methodology stated
-67,geo-report-pdf,GEO,GEO PDF report,Reporting,approved report content,PDF-ready report,source figures validated
-68,geo-schema,GEO,GEO/entity schema,Technical,entity/page facts,schema graph/spec,accurate relationships
-69,geo-technical,GEO,GEO technical foundation,Technical,crawl/index/render architecture,technical plan,accessibility verified
-70,cold-email,Growth,"Write and run B2B cold outbound that gets replies, from cold emails and follow-ups to sending setup, LinkedIn, multichannel cadences, and re",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-71,cro,Growth,"When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-72,customer-research,Growth,"When the user wants to conduct, analyze, or synthesize customer research.",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-73,marketing-psychology,Growth,"When the user wants to apply psychological principles, mental models, or behavioral science to marketing.",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-74,offers,Growth,"When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guar",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-75,pricing,Growth,"When the user wants help with pricing decisions, packaging, or monetization strategy.",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-76,product-marketing,Growth,When the user wants to create or update their product marketing context document.,On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-77,prospecting,Growth,"When the user wants to find, qualify, and build a list of prospects to reach out to, across B2B SaaS, general B2B, or local small businesses",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-78,reverse-engineer-marketing,Growth,When the user wants to reverse engineer how another company grew and copy what worked.,On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-79,sales-enablement,Growth,"When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts.",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
-80,clean-user-facing-text,Text,Clean final user-facing copy,Final QA,approved content,clean copy,no internal/tool/prompt leakage
-81,humanizer,Text,Human editorial refinement,Editorial,fact-checked draft,natural copy,no fabricated human experience
-82,remove-ai-marks,Text,Remove obvious AI artifacts,Final QA,draft/final copy,clean final text,do not optimize for detector scores
+39,seo-ecommerce,SEO,"Ecommerce SEO: product pages, Product schema, Shopping visibility, marketplace signals",On demand,store URL or keyword,ecommerce SEO analysis,see system/quality-gates.md
+40,seo-flow,SEO,SEO workflow orchestration,Orchestration,task + selected modules,execution flow,dependencies respected
+41,seo-geo,SEO,SEO + GEO integration,Optimization,SEO + GEO findings,integrated recommendations,no false GEO guarantees
+42,seo-google,SEO,Google search analysis,Research,queries/pages,Google SERP/indexation findings,time period documented
+43,seo-hreflang,SEO,International SEO/hreflang,Technical,locale URL model,hreflang plan/QA,bidirectional mapping checked
+44,seo-image-gen,SEO,Generate SEO visual assets,Creation,visual brief,image asset,brand/accessibility requirements met
+45,seo-images,SEO,Image SEO,Optimization,images/page context,filename/alt/caption/metadata,"descriptive, not spammy"
+46,seo-local,SEO,Local SEO,Specialized,business/location/services,local SEO plan,location facts verified
+47,seo-maps,SEO,Maps/local visibility,Local,business listing data,maps optimization plan,no fake locations
+48,seo-page,SEO,Individual page optimization,Optimization,page + intent,optimized page spec,search intent preserved
+49,seo-plan,SEO,SEO roadmap,Strategy,"audit, goals, resources",prioritized roadmap,impact/effort explicit
+50,seo-programmatic,SEO,Programmatic SEO,Scale,"template, data, intent model",programmatic system,pilot before scale
+51,seo-schema,SEO,Schema.org/JSON-LD,Technical,page/entity facts,schema graph/spec,accurate visible facts
+52,seo-sitemap,SEO,XML sitemap,Technical,URL inventory,sitemap plan/file,canonical/indexable URLs only
+53,seo-sxo,SEO,Search experience/conversion,Optimization,intent + page + conversion,SXO recommendations,UX not sacrificed for SEO
+54,seo-technical,SEO,Technical SEO,Technical,crawl/render/index data,technical fixes,severity + evidence
+55,seo-voice,SEO,VEO: voice engine optimization,Optimization,"pages, local listings, GSC data",VEO report + fixes,no untraceable voice stats; speakable news-only
+56,geo,GEO,Master GEO router,Routing,GEO objective/context,selected GEO workflow,measurable objective
+57,geo-audit,GEO,GEO visibility audit,Diagnosis,brand/entity/content/search data,GEO audit,observations sourced
+58,geo-brand-mentions,GEO,Brand mention intelligence,Authority,brand/entity landscape,mention map,sources verified
+59,geo-citability,GEO,Citation readiness,Optimization,content + source profile,citability improvements,no citation guarantee
+60,geo-compare,GEO,Competitor GEO comparison,Research,competitors/topics,comparison evidence,no unsupported rankings
+61,geo-content,GEO,Generative-search content,Creation,entity model + intent + evidence,GEO-ready content,useful to humans first
+62,geo-crawlers,GEO,AI crawler accessibility,Technical,robots/server/access data,crawler findings,platform behavior not assumed
+63,geo-llmstxt,GEO,llms.txt workflow,Technical,site architecture,llms.txt assessment/file,no ranking guarantee claims
+64,geo-platform-optimizer,GEO,Platform-specific optimization,Optimization,target AI/search platforms,platform recommendations,current platform behavior verified
+65,geo-proposal,GEO,GEO service proposal,Commercial,"scope, evidence, offer",proposal,no guaranteed outcomes
+66,geo-prospect,GEO,GEO prospect research,Sales,prospect/site,prospect brief,facts separated from hypotheses
+67,geo-report,GEO,GEO reporting,Measurement,visibility/mention/citation data,report,time period and methodology stated
+68,geo-report-pdf,GEO,GEO PDF report,Reporting,approved report content,PDF-ready report,source figures validated
+69,geo-schema,GEO,GEO/entity schema,Technical,entity/page facts,schema graph/spec,accurate relationships
+70,geo-technical,GEO,GEO technical foundation,Technical,crawl/index/render architecture,technical plan,accessibility verified
+71,cold-email,Growth,"Write and run B2B cold outbound that gets replies, from cold emails and follow-ups to sending setup, LinkedIn, multichannel cadences, and re",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+72,cro,Growth,"When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+73,customer-research,Growth,"When the user wants to conduct, analyze, or synthesize customer research.",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+74,marketing-psychology,Growth,"When the user wants to apply psychological principles, mental models, or behavioral science to marketing.",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+75,offers,Growth,"When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guar",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+76,pricing,Growth,"When the user wants help with pricing decisions, packaging, or monetization strategy.",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+77,product-marketing,Growth,When the user wants to create or update their product marketing context document.,On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+78,prospecting,Growth,"When the user wants to find, qualify, and build a list of prospects to reach out to, across B2B SaaS, general B2B, or local small businesses",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+79,reverse-engineer-marketing,Growth,When the user wants to reverse engineer how another company grew and copy what worked.,On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+80,sales-enablement,Growth,"When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts.",On demand,brief or URL,deliverable per SKILL.md,see system/quality-gates.md
+81,clean-user-facing-text,Text,Clean final user-facing copy,Final QA,approved content,clean copy,no internal/tool/prompt leakage
+82,humanizer,Text,Human editorial refinement,Editorial,fact-checked draft,natural copy,no fabricated human experience
+83,remove-ai-marks,Text,Remove obvious AI artifacts,Final QA,draft/final copy,clean final text,do not optimize for detector scores

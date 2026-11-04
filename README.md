@@ -2,12 +2,12 @@
 
 <h1 align="center">Claude SEO + AEO + GEO Kit</h1>
 
-<p align="center"><b>82 skills that research, write, fact-check and audit pages for Google, answer engines and AI search.</b><br>Plus a free command that scores any page 0-100.</p>
+<p align="center"><b>83 skills that research, write, fact-check and audit pages for Google, answer engines and AI search.</b><br>Plus a free command that scores any page 0-100.</p>
 
 <p align="center">
 <a href="https://www.npmjs.com/package/seo-aeo-geo-kit"><img src="https://img.shields.io/npm/v/seo-aeo-geo-kit?color=ff7a45" alt="npm version"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT license"></a>
-<img src="https://img.shields.io/badge/skills-82-ff5c8a" alt="82 skills">
+<img src="https://img.shields.io/badge/skills-83-ff5c8a" alt="83 skills">
 <img src="https://img.shields.io/badge/Claude%20Code-plugin-7d7aff" alt="Claude Code plugin">
 </p>
 
@@ -66,6 +66,10 @@ npx seo-aeo-geo-kit list --family GEO
 - [`system/skill-registry.json`](system/skill-registry.json): machine-readable index of every skill.
 - [`templates/`](templates/): content brief, project context and QA report templates.
 - [`scripts/`](scripts/): Python helpers for Search Console, GA4, autocomplete research and text cleanup. They read your own config files (see the `*.example.json` files).
+
+## Helper scripts (optional)
+
+Many skills call Python helpers (page rendering, Google Search Console and GA4, PageSpeed, schema validation, and more). All 42 that the skills reference are bundled in [`scripts/`](scripts/). They run through a managed, sandboxed Python environment (Python 3.11 to 3.14), created the first time you run `/seo setup` inside Claude Code. Some use optional services such as Google or Moz and need your own keys. The kit works without them: skills fall back to manual checks.
 
 ## What the auditor checks
 

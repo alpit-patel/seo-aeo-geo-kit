@@ -381,6 +381,16 @@
   },
   {
     "id": 39,
+    "skill": "seo-ecommerce",
+    "family": "SEO",
+    "purpose": "Ecommerce SEO: product pages, Product schema, Shopping visibility, marketplace signals",
+    "stage": "On demand",
+    "inputs": "store URL or keyword",
+    "output": "ecommerce SEO analysis",
+    "qa": "see system/quality-gates.md"
+  },
+  {
+    "id": 40,
     "skill": "seo-flow",
     "family": "SEO",
     "purpose": "SEO workflow orchestration",
@@ -390,7 +400,7 @@
     "qa": "dependencies respected"
   },
   {
-    "id": 40,
+    "id": 41,
     "skill": "seo-geo",
     "family": "SEO",
     "purpose": "SEO + GEO integration",
@@ -400,7 +410,7 @@
     "qa": "no false GEO guarantees"
   },
   {
-    "id": 41,
+    "id": 42,
     "skill": "seo-google",
     "family": "SEO",
     "purpose": "Google search analysis",
@@ -410,7 +420,7 @@
     "qa": "time period documented"
   },
   {
-    "id": 42,
+    "id": 43,
     "skill": "seo-hreflang",
     "family": "SEO",
     "purpose": "International SEO/hreflang",
@@ -420,7 +430,7 @@
     "qa": "bidirectional mapping checked"
   },
   {
-    "id": 43,
+    "id": 44,
     "skill": "seo-image-gen",
     "family": "SEO",
     "purpose": "Generate SEO visual assets",
@@ -430,7 +440,7 @@
     "qa": "brand/accessibility requirements met"
   },
   {
-    "id": 44,
+    "id": 45,
     "skill": "seo-images",
     "family": "SEO",
     "purpose": "Image SEO",
@@ -440,7 +450,7 @@
     "qa": "descriptive, not spammy"
   },
   {
-    "id": 45,
+    "id": 46,
     "skill": "seo-local",
     "family": "SEO",
     "purpose": "Local SEO",
@@ -450,7 +460,7 @@
     "qa": "location facts verified"
   },
   {
-    "id": 46,
+    "id": 47,
     "skill": "seo-maps",
     "family": "SEO",
     "purpose": "Maps/local visibility",
@@ -460,7 +470,7 @@
     "qa": "no fake locations"
   },
   {
-    "id": 47,
+    "id": 48,
     "skill": "seo-page",
     "family": "SEO",
     "purpose": "Individual page optimization",
@@ -470,7 +480,7 @@
     "qa": "search intent preserved"
   },
   {
-    "id": 48,
+    "id": 49,
     "skill": "seo-plan",
     "family": "SEO",
     "purpose": "SEO roadmap",
@@ -480,7 +490,7 @@
     "qa": "impact/effort explicit"
   },
   {
-    "id": 49,
+    "id": 50,
     "skill": "seo-programmatic",
     "family": "SEO",
     "purpose": "Programmatic SEO",
@@ -490,7 +500,7 @@
     "qa": "pilot before scale"
   },
   {
-    "id": 50,
+    "id": 51,
     "skill": "seo-schema",
     "family": "SEO",
     "purpose": "Schema.org/JSON-LD",
@@ -500,7 +510,7 @@
     "qa": "accurate visible facts"
   },
   {
-    "id": 51,
+    "id": 52,
     "skill": "seo-sitemap",
     "family": "SEO",
     "purpose": "XML sitemap",
@@ -510,7 +520,7 @@
     "qa": "canonical/indexable URLs only"
   },
   {
-    "id": 52,
+    "id": 53,
     "skill": "seo-sxo",
     "family": "SEO",
     "purpose": "Search experience/conversion",
@@ -520,7 +530,7 @@
     "qa": "UX not sacrificed for SEO"
   },
   {
-    "id": 53,
+    "id": 54,
     "skill": "seo-technical",
     "family": "SEO",
     "purpose": "Technical SEO",
@@ -530,7 +540,7 @@
     "qa": "severity + evidence"
   },
   {
-    "id": 54,
+    "id": 55,
     "skill": "seo-voice",
     "family": "SEO",
     "purpose": "VEO: voice engine optimization",
@@ -540,7 +550,7 @@
     "qa": "no untraceable voice stats; speakable news-only"
   },
   {
-    "id": 55,
+    "id": 56,
     "skill": "geo",
     "family": "GEO",
     "purpose": "Master GEO router",
@@ -550,7 +560,7 @@
     "qa": "measurable objective"
   },
   {
-    "id": 56,
+    "id": 57,
     "skill": "geo-audit",
     "family": "GEO",
     "purpose": "GEO visibility audit",
@@ -560,7 +570,7 @@
     "qa": "observations sourced"
   },
   {
-    "id": 57,
+    "id": 58,
     "skill": "geo-brand-mentions",
     "family": "GEO",
     "purpose": "Brand mention intelligence",
@@ -570,7 +580,7 @@
     "qa": "sources verified"
   },
   {
-    "id": 58,
+    "id": 59,
     "skill": "geo-citability",
     "family": "GEO",
     "purpose": "Citation readiness",
@@ -580,7 +590,7 @@
     "qa": "no citation guarantee"
   },
   {
-    "id": 59,
+    "id": 60,
     "skill": "geo-compare",
     "family": "GEO",
     "purpose": "Competitor GEO comparison",
@@ -590,7 +600,7 @@
     "qa": "no unsupported rankings"
   },
   {
-    "id": 60,
+    "id": 61,
     "skill": "geo-content",
     "family": "GEO",
     "purpose": "Generative-search content",
@@ -600,7 +610,7 @@
     "qa": "useful to humans first"
   },
   {
-    "id": 61,
+    "id": 62,
     "skill": "geo-crawlers",
     "family": "GEO",
     "purpose": "AI crawler accessibility",
@@ -610,7 +620,7 @@
     "qa": "platform behavior not assumed"
   },
   {
-    "id": 62,
+    "id": 63,
     "skill": "geo-llmstxt",
     "family": "GEO",
     "purpose": "llms.txt workflow",
@@ -620,7 +630,7 @@
     "qa": "no ranking guarantee claims"
   },
   {
-    "id": 63,
+    "id": 64,
     "skill": "geo-platform-optimizer",
     "family": "GEO",
     "purpose": "Platform-specific optimization",
@@ -630,7 +640,7 @@
     "qa": "current platform behavior verified"
   },
   {
-    "id": 64,
+    "id": 65,
     "skill": "geo-proposal",
     "family": "GEO",
     "purpose": "GEO service proposal",
@@ -640,7 +650,7 @@
     "qa": "no guaranteed outcomes"
   },
   {
-    "id": 65,
+    "id": 66,
     "skill": "geo-prospect",
     "family": "GEO",
     "purpose": "GEO prospect research",
@@ -650,7 +660,7 @@
     "qa": "facts separated from hypotheses"
   },
   {
-    "id": 66,
+    "id": 67,
     "skill": "geo-report",
     "family": "GEO",
     "purpose": "GEO reporting",
@@ -660,7 +670,7 @@
     "qa": "time period and methodology stated"
   },
   {
-    "id": 67,
+    "id": 68,
     "skill": "geo-report-pdf",
     "family": "GEO",
     "purpose": "GEO PDF report",
@@ -670,7 +680,7 @@
     "qa": "source figures validated"
   },
   {
-    "id": 68,
+    "id": 69,
     "skill": "geo-schema",
     "family": "GEO",
     "purpose": "GEO/entity schema",
@@ -680,7 +690,7 @@
     "qa": "accurate relationships"
   },
   {
-    "id": 69,
+    "id": 70,
     "skill": "geo-technical",
     "family": "GEO",
     "purpose": "GEO technical foundation",
@@ -690,7 +700,7 @@
     "qa": "accessibility verified"
   },
   {
-    "id": 70,
+    "id": 71,
     "skill": "cold-email",
     "family": "Growth",
     "purpose": "Write and run B2B cold outbound that gets replies, from cold emails and follow-ups to sending setup, LinkedIn, multichannel cadences, and re",
@@ -700,7 +710,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 71,
+    "id": 72,
     "skill": "cro",
     "family": "Growth",
     "purpose": "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing",
@@ -710,7 +720,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 72,
+    "id": 73,
     "skill": "customer-research",
     "family": "Growth",
     "purpose": "When the user wants to conduct, analyze, or synthesize customer research.",
@@ -720,7 +730,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 73,
+    "id": 74,
     "skill": "marketing-psychology",
     "family": "Growth",
     "purpose": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing.",
@@ -730,7 +740,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 74,
+    "id": 75,
     "skill": "offers",
     "family": "Growth",
     "purpose": "When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guar",
@@ -740,7 +750,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 75,
+    "id": 76,
     "skill": "pricing",
     "family": "Growth",
     "purpose": "When the user wants help with pricing decisions, packaging, or monetization strategy.",
@@ -750,7 +760,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 76,
+    "id": 77,
     "skill": "product-marketing",
     "family": "Growth",
     "purpose": "When the user wants to create or update their product marketing context document.",
@@ -760,7 +770,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 77,
+    "id": 78,
     "skill": "prospecting",
     "family": "Growth",
     "purpose": "When the user wants to find, qualify, and build a list of prospects to reach out to, across B2B SaaS, general B2B, or local small businesses",
@@ -770,7 +780,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 78,
+    "id": 79,
     "skill": "reverse-engineer-marketing",
     "family": "Growth",
     "purpose": "When the user wants to reverse engineer how another company grew and copy what worked.",
@@ -780,7 +790,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 79,
+    "id": 80,
     "skill": "sales-enablement",
     "family": "Growth",
     "purpose": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts.",
@@ -790,7 +800,7 @@
     "qa": "see system/quality-gates.md"
   },
   {
-    "id": 80,
+    "id": 81,
     "skill": "clean-user-facing-text",
     "family": "Text",
     "purpose": "Clean final user-facing copy",
@@ -800,7 +810,7 @@
     "qa": "no internal/tool/prompt leakage"
   },
   {
-    "id": 81,
+    "id": 82,
     "skill": "humanizer",
     "family": "Text",
     "purpose": "Human editorial refinement",
@@ -810,7 +820,7 @@
     "qa": "no fabricated human experience"
   },
   {
-    "id": 82,
+    "id": 83,
     "skill": "remove-ai-marks",
     "family": "Text",
     "purpose": "Remove obvious AI artifacts",
