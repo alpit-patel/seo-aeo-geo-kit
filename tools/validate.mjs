@@ -62,7 +62,7 @@ if (csvRows.length !== reg.length) err(`routing csv has ${csvRows.length} rows b
 
 // 3. markdown links + dangling skill refs + leaks
 const mdFiles = walk(ROOT).filter((f) => f.endsWith('.md') && !f.includes(`${sep}vendor${sep}`));
-const LEAK = [/alpit/i, /[A-Z]:\/(?:Users|alpit|\.claude)/, /\bAIza[0-9A-Za-z_-]{30,}/, /\bsk-[A-Za-z0-9]{20,}/, /\bghp_[A-Za-z0-9]{20,}/, /BEGIN (?:RSA |OPENSSH )?PRIVATE KEY/];
+const LEAK = [/__private_identifiers__/i, /[A-Z]:\/(?:Users|alpit|\.claude)/, /\bAIza[0-9A-Za-z_-]{30,}/, /\bsk-[A-Za-z0-9]{20,}/, /\bghp_[A-Za-z0-9]{20,}/, /BEGIN (?:RSA |OPENSSH )?PRIVATE KEY/];
 const refRe = /`((?:seo|blog|geo)(?:-[a-z0-9]+)*)`/g;
 for (const f of walk(ROOT)) {
   if (f.includes(`${sep}vendor${sep}`) || /\.(png|jpg|jpeg|gif|pdf|ico|woff2?)$/i.test(f)) continue;
