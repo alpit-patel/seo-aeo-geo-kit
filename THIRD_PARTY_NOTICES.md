@@ -1,6 +1,6 @@
 # Third-party notices
 
-This kit combines original material with skills and tooling from open-source projects, all released under the MIT License. Each skill folder keeps its own license file where the upstream project provided one. Thank you to the original authors.
+The original work in this kit (the auditor CLI, validator, launcher, routing and quality system, templates and integration) is Copyright (c) 2026 Alpit Patel, MIT. The kit also combines material with skills and tooling from open-source projects, all released under the MIT License. Each skill folder keeps its own license file where the upstream project provided one. Thank you to the original authors.
 
 | Copyright / author | Skills |
 | --- | --- |
