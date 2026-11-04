@@ -68,8 +68,6 @@ if (csvRows.length !== reg.length) err(`routing csv has ${csvRows.length} rows b
 const mdFiles = walk(ROOT).filter((f) => f.endsWith('.md') && !f.includes(`${sep}vendor${sep}`));
 // Private names that must never be published are stored only as SHA-256 hashes, so this file does not reveal them.
 const PRIVATE_HASHES = new Set([
-  '8b125c37732583700904e24c36924dea5a8fd250bdc8e239f575c008b54e5650',
-  '22e6405ff846026cd74f05e7a1b306762c9603624b75f01c27b5ccda6f5a656e',
   'd266af612a7a2ac242e563db2b2678e29d19c8bec25b2bacfc406f296f793312',
   '31bdf4c4450c28f7ee3a1214ebd9b5f72a372cf9ce5ee9f5f8d2dde4873b8a32',
   'cda64ae2d8860fd8972f009b5bf5e03c1ffee99b53bd572f50c49ed58fbae324',
@@ -77,6 +75,11 @@ const PRIVATE_HASHES = new Set([
   'e2eee2cd321941fdd8e53933d47ccfbc0c958121d9f1fbe6268d9dc473d3bd53',
 ]);
 const sha = (t) => createHash('sha256').update(t).digest('hex');
+// Private email addresses, also stored only as hashes.
+const PRIVATE_EMAIL_HASHES = new Set(['3849f33be99d1af6972b7938f08f90312209e6a93dd53e03d786ed03c94476f3']);
+function hasPrivateEmail(text) {
+  return (text.match(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g) || []).some((e) => PRIVATE_EMAIL_HASHES.has(sha(e.toLowerCase())));
+}
 function hasPrivateName(text) {
   for (const tok of new Set(text.toLowerCase().match(/[a-z0-9][a-z0-9_-]{3,40}/g) || [])) {
     if (PRIVATE_HASHES.has(sha(tok))) return true;
@@ -90,6 +93,7 @@ for (const f of walk(ROOT)) {
   if (f.includes(`${sep}vendor${sep}`) || /\.(png|jpg|jpeg|gif|pdf|ico|woff2?)$/i.test(f)) continue;
   let text; try { text = readFileSync(f, 'utf8'); } catch { continue; }
   const rel = relative(ROOT, f).split(sep).join('/'); // forward slashes on every OS
+  if (hasPrivateEmail(text) && !rel.startsWith('tools/')) err(`${rel}: contains a private email address`);
   if (hasPrivateName(text) && !rel.startsWith('tools/')) err(`${rel}: contains a private name (see PRIVATE_HASHES in tools/validate.mjs)`);
   for (const re of LEAK) if (re.test(text) && !rel.startsWith('tools/') && !/^test\/[^/]+\.test\.mjs$/.test(rel)) err(`${rel}: possible leak matching ${re}`);
   if (!f.endsWith('.md')) continue;

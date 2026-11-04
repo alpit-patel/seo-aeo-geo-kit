@@ -2,7 +2,7 @@
 
 <h1 align="center">Claude SEO + AEO + GEO Kit</h1>
 
-<p align="center">Created and maintained by <a href="https://github.com/alpit-patel"><b>Alpit Patel</b></a></p>
+<p align="center">Created and maintained by <a href="https://github.com/alpit-patel"><b>Alpit Patel</b></a> · <a href="https://autoesta.com">Autoesta</a> · <a href="https://aibrevo.com">Aibrevo</a></p>
 
 <p align="center"><b>83 skills that research, write, fact-check and audit pages for Google, answer engines and AI search.</b><br>Plus a free command that scores any page 0-100.</p>
 
