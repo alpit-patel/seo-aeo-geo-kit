@@ -3,6 +3,7 @@
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join, dirname, resolve, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const SKILLS = join(ROOT, 'skills');
@@ -62,12 +63,31 @@ if (csvRows.length !== reg.length) err(`routing csv has ${csvRows.length} rows b
 
 // 3. markdown links + dangling skill refs + leaks
 const mdFiles = walk(ROOT).filter((f) => f.endsWith('.md') && !f.includes(`${sep}vendor${sep}`));
-const LEAK = [/__private_identifiers__/i, /[A-Z]:\/(?:Users|alpit|\.claude)/, /\bAIza[0-9A-Za-z_-]{30,}/, /\bsk-[A-Za-z0-9]{20,}/, /\bghp_[A-Za-z0-9]{20,}/, /BEGIN (?:RSA |OPENSSH )?PRIVATE KEY/];
+// Private names that must never be published are stored only as SHA-256 hashes, so this file does not reveal them.
+const PRIVATE_HASHES = new Set([
+  '8b125c37732583700904e24c36924dea5a8fd250bdc8e239f575c008b54e5650',
+  '22e6405ff846026cd74f05e7a1b306762c9603624b75f01c27b5ccda6f5a656e',
+  'd266af612a7a2ac242e563db2b2678e29d19c8bec25b2bacfc406f296f793312',
+  '31bdf4c4450c28f7ee3a1214ebd9b5f72a372cf9ce5ee9f5f8d2dde4873b8a32',
+  'cda64ae2d8860fd8972f009b5bf5e03c1ffee99b53bd572f50c49ed58fbae324',
+  'cef924b1adf85e85284c50b7a5ddcfb51b4be10ff0f79ee5e00cf818ceb4bf59',
+  'e2eee2cd321941fdd8e53933d47ccfbc0c958121d9f1fbe6268d9dc473d3bd53',
+]);
+const sha = (t) => createHash('sha256').update(t).digest('hex');
+function hasPrivateName(text) {
+  for (const tok of new Set(text.toLowerCase().match(/[a-z0-9][a-z0-9_-]{3,40}/g) || [])) {
+    if (PRIVATE_HASHES.has(sha(tok))) return true;
+    for (const part of tok.split(/[-_]+/)) if (part.length >= 4 && PRIVATE_HASHES.has(sha(part))) return true;
+  }
+  return false;
+}
+const LEAK = [/[A-Z]:\/(?:Users|alpit|\.claude)/, /\bAIza[0-9A-Za-z_-]{30,}/, /\bsk-[A-Za-z0-9]{20,}/, /\bghp_[A-Za-z0-9]{20,}/, /BEGIN (?:RSA |OPENSSH )?PRIVATE KEY/];
 const refRe = /`((?:seo|blog|geo)(?:-[a-z0-9]+)*)`/g;
 for (const f of walk(ROOT)) {
   if (f.includes(`${sep}vendor${sep}`) || /\.(png|jpg|jpeg|gif|pdf|ico|woff2?)$/i.test(f)) continue;
   let text; try { text = readFileSync(f, 'utf8'); } catch { continue; }
   const rel = relative(ROOT, f).split(sep).join('/'); // forward slashes on every OS
+  if (hasPrivateName(text) && !rel.startsWith('tools/')) err(`${rel}: contains a private name (see PRIVATE_HASHES in tools/validate.mjs)`);
   for (const re of LEAK) if (re.test(text) && !rel.startsWith('tools/') && !/^test\/[^/]+\.test\.mjs$/.test(rel)) err(`${rel}: possible leak matching ${re}`);
   if (!f.endsWith('.md')) continue;
   const clean = text.replace(/```[\s\S]*?```/g, '');
