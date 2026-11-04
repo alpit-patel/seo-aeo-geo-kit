@@ -1,6 +1,6 @@
 {
   "name": "seo-aeo-geo-kit",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "SEO + AEO + GEO skills for Claude Code (83 skills) plus a free page auditor that scores any page 0-100.",
   "type": "module",
   "bin": {

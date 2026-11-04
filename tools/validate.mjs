@@ -67,7 +67,7 @@ const refRe = /`((?:seo|blog|geo)(?:-[a-z0-9]+)*)`/g;
 for (const f of walk(ROOT)) {
   if (f.includes(`${sep}vendor${sep}`) || /\.(png|jpg|jpeg|gif|pdf|ico|woff2?)$/i.test(f)) continue;
   let text; try { text = readFileSync(f, 'utf8'); } catch { continue; }
-  const rel = relative(ROOT, f);
+  const rel = relative(ROOT, f).split(sep).join('/'); // forward slashes on every OS
   for (const re of LEAK) if (re.test(text) && !rel.startsWith('tools/')) err(`${rel}: possible leak matching ${re}`);
   if (!f.endsWith('.md')) continue;
   const clean = text.replace(/```[\s\S]*?```/g, '');
@@ -77,7 +77,7 @@ for (const f of walk(ROOT)) {
     if (/[<>{}*]/.test(t) || /^(url|URL|filename\.md|pillar\.md|path|link)$/.test(t)) continue; // template placeholders
     if (!existsSync(resolve(dirname(f), decodeURI(t)))) err(`${rel}: broken link ${m[1]}`);
   }
-  if (rel.startsWith('skills' + sep) || rel.startsWith('system' + sep) || rel === 'README.md') {
+  if (rel.startsWith('skills/') || rel.startsWith('system/') || rel === 'README.md') {
     for (const m of clean.matchAll(refRe)) {
       const n = m[1];
       if (n === 'seo' || n === 'blog' || n === 'geo') { if (!skillSet.has(n)) err(`${rel}: references missing skill ${n}`); continue; }

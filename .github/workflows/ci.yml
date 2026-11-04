@@ -35,4 +35,6 @@ jobs:
         run: python -m compileall -q scripts agents skills
       - name: Runtime launcher rejects unknown scripts
         run: |
-          python scripts/runtime.py run definitely_missing.py; test $? -eq 2
+          rc=0
+          python scripts/runtime.py run definitely_missing.py || rc=$?
+          test "$rc" -eq 2
